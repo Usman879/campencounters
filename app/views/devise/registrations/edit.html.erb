@@ -17,6 +17,11 @@
     <%= f.label :phone_number %><br />
     <%= f.text_field :phone_number, autofocus: true %>
   </div>
+
+  <div class="field">
+    <%= f.label :country %><br />
+    <%= f.country_select :country %>
+  </div>
   
   <div class="field">
     <%= f.label :email %><br />
