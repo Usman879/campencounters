@@ -6,8 +6,8 @@ class RegistrationController < Devise::RegistrationController
 protected
 
 def configure_permitted_parameters
-  devise_parameter_sanitizer.permit(:sign_up).push { |u| u.permit(:first_name, :last_name, :country, :phone_number, :email, :password) }
-  devise_parameter_sanitizer.permit(:account_update).push { |u| u.permit(:first_name, :last_name, :country, :phone_number, :email, :password, :current_password) }
+  devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:first_name, :last_name, :country, :phone_number, :email, :password) }
+  devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:first_name, :last_name, :country, :phone_number, :email, :password, :current_password) }
 end
 
 end
