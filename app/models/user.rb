@@ -5,6 +5,6 @@ class User < ApplicationRecord
   :recoverable, :rememberable, :validatable,
   :trackable, :confirmable
 
-  # validates :first_name, :last_name, presence: :true
-  # validates :phone_number, presence: true, numericality: { only_integer: true }
+  # validates :phone_number,:presence => true, :numericality => true, :length => { :minimum => 10, :maximum => 15 }
+  
 end
