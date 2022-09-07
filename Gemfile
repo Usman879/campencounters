@@ -61,7 +61,8 @@ group :test do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'bootstrap', '~> 5.2.0'
+gem 'country_select', '~> 6.0'
+gem 'devise'
 gem 'rubocop', require: false
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
-gem 'devise'
-gem 'country_select', '~> 6.0'

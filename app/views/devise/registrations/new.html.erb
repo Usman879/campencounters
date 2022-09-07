@@ -20,7 +20,7 @@
 
   <div class="field">
     <%= f.label :country %><br />
-    <%= f.country_select :country %>
+    <%= f.country_select :country , {} %>
   </div>
 
   <div class="field">
@@ -40,10 +40,24 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
+<p> By voluntarily registering on this site, you consent to:
+(i) the collection, use and disclosure by the XYZ Institutions of your personal information, including your personal health information for the purposes of: 
+ (a) institutional planning to assist with the creation 
+ (b) notification and/or delivery of other programs and services 
+ (c) statistical analysis necessary to further assist  
+ (d) planning of or response to a natural disaster or other event deemed to be an emergency (collectively, the "Purposes");
+(ii) being contacted by the XYZ Institutions for reasons related to the Purposes.
+For more information please review our <%= link_to "Privacy Policy", "https://ge-stage-2019.herokuapp.com/privacy_policy" %></p>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
+ <div class="field">
+   <%= f.check_box :agreement, class: 'form-control' %>
+   <%= f.label :I_agree_terms_and_conditions %>
+ </div>
+ 
+ <div class="actions">
+   <%= f.submit "Sign up" %>
+ </div>
+
 <% end %>
 
 <%= render "devise/shared/links" %>
