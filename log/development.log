@@ -8733,3 +8733,89 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 157ms (Views: 153.3ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (2.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "super12453@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (3.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "super12453@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (1.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mSuperAdmin Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('SuperAdmin') ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin12453@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin12453@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@projectname.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@projectname.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin12@projectname.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin12@projectname.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mAdmin Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "confirmation_token", "confirmation_sent_at", "created_at", "updated_at", "first_name", "last_name", "type", "phone_number") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "admin12@projectname.com"], ["encrypted_password", "$2a$12$oh3nuib04esqEV3eCF6cWeiX.z8hr9La8V1VeseEensPQK.YlBGQ2"], ["confirmation_token", "NTEc-8g5NPu8dWEMEzPs"], ["confirmation_sent_at", "2022-09-08 10:52:55.420254"], ["created_at", "2022-09-08 10:52:55.419959"], ["updated_at", "2022-09-08 10:52:55.419959"], ["first_name", "Usman"], ["last_name", "Noor"], ["type", "Admin"], ["phone_number", "03214004770"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  Rendering devise/mailer/confirmation_instructions.html.erb
+  Rendered devise/mailer/confirmation_instructions.html.erb (2.3ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 37.0ms
+Sent mail to admin12@projectname.com (13102.1ms)
+Date: Thu, 08 Sep 2022 15:52:55 +0500
+From: usmannoor519@gmail.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: admin12@projectname.com
+Message-ID: <6319c9878aaf9_1d82e3f20952ca@xombo.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome admin12@projectname.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=NTEc-8g5NPu8dWEMEzPs">Confirm my account</a></p>
+
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "super@projectname.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "super@projectname.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mSuperAdmin Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "confirmation_token", "confirmation_sent_at", "created_at", "updated_at", "first_name", "last_name", "type", "phone_number") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "super@projectname.com"], ["encrypted_password", "$2a$12$rhkfDOrVp7wfsgu8eFHDr.iywM9wzX/Y8A6HZ1MCzcIbS7UxvFY5W"], ["confirmation_token", "eW2eCcotSsFRhkCzAuR3"], ["confirmation_sent_at", "2022-09-08 10:53:08.987515"], ["created_at", "2022-09-08 10:53:08.987346"], ["updated_at", "2022-09-08 10:53:08.987346"], ["first_name", "SuperUs"], ["last_name", "Noor"], ["type", "SuperAdmin"], ["phone_number", "03214042770"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  Rendering devise/mailer/confirmation_instructions.html.erb
+  Rendered devise/mailer/confirmation_instructions.html.erb (0.6ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 9.6ms
+Sent mail to super@projectname.com (8457.8ms)
+Date: Thu, 08 Sep 2022 15:53:09 +0500
+From: usmannoor519@gmail.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: super@projectname.com
+Message-ID: <6319c9951b2b_1d82e3f20953ad@xombo.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome super@projectname.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=eW2eCcotSsFRhkCzAuR3">Confirm my account</a></p>
+
