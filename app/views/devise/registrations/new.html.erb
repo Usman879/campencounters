@@ -1,0 +1,64 @@
+<div class="container-fluid w-50 border rounded shadow mt-5 p-4 text-center">
+  <h2 class="h3 mb-3 fw-normal">Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.text_field :first_name, autofocus: true, class: "form-control", placeholder: "First name" %>
+  </div>
+  <br/>
+
+  <div class="field">
+    <%= f.text_field :last_name, autofocus: true, class: "form-control", placeholder: "Last name" %>
+  </div>
+  <br/>
+
+  <div class="field">
+    <%= f.text_field :phone_number, autofocus: true, class: "form-control", placeholder: "Phone Number" %>
+  </div>
+  <br/>
+
+  <div class="field">
+    <%= f.country_select :country , {} , selected: "PK", class: "form-control"%>
+  </div>
+  <br/>
+
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email"%>
+  </div>
+  <br/>
+
+  <div class="field">
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autofocus: true, class: "form-control", placeholder: "Password" %>
+  </div>
+  <br/>
+
+  <div class="field">
+    <%= f.password_field :password_confirmation, autofocus: true, class: "form-control", placeholder: "Password Confirmation" %>
+  </div>
+  <br/>
+<p> By voluntarily registering on this site, you consent to:
+(i) the collection, use and disclosure by the XYZ Institutions of your personal information, including your personal health information for the purposes of: 
+ (a) institutional planning to assist with the creation 
+ (b) notification and/or delivery of other programs and services 
+ (c) statistical analysis necessary to further assist  
+ (d) planning of or response to a natural disaster or other event deemed to be an emergency (collectively, the "Purposes");
+(ii) being contacted by the XYZ Institutions for reasons related to the Purposes.
+For more information please review our<br/> <%= link_to "Privacy Policy", "https://ge-stage-2019.herokuapp.com/privacy_policy" %></p>
+<br/>
+   <%= f.check_box :agreement %>
+   <%= f.label :I_agree_terms_and_conditions %>
+ <br/>
+
+ <div class="actions">
+   <%= f.submit "Sign up", class: "form-control" %>
+ </div>
+
+<% end %>
+
+ <%= render "devise/shared/links" %>
+</div>
