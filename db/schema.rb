@@ -13,7 +13,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_220_907_052_404) do
+ActiveRecord::Schema.define(version: 20_220_907_052_404) do # rubocop:disable Metrics/BlockLength
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20_220_907_052_404) do
     t.datetime 'updated_at', null: false
   end
 
-  create_table 'users', force: :cascade do |t|
+  create_table 'users', force: :cascade do |t| # rubocop:disable Metrics/BlockLength
     t.string 'email', default: '', null: false
     t.string 'encrypted_password', default: '', null: false
     t.string 'reset_password_token'

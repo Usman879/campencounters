@@ -64,5 +64,6 @@ end
 gem 'bootstrap', '~> 5.2.0'
 gem 'country_select', '~> 6.0'
 gem 'devise'
+gem 'jquery-rails'
 gem 'rubocop', require: false
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]

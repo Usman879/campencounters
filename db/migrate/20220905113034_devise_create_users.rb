@@ -3,7 +3,7 @@
 # Missing top-level documentation
 #
 class DeviseCreateUsers < ActiveRecord::Migration[5.2]
-  def change
+  def change # rubocop:disable Metrics/AbcSize, Metrics/MethodLength
     create_table :users do |t|
       ## Database authenticatable
       t.string :email,              null: false, default: ''

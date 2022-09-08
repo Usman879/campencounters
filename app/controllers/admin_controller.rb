@@ -3,5 +3,4 @@
 # Missing top-level documentation
 #
 class AdminController < ApplicationController
-  def index; end
 end
