@@ -8819,3 +8819,751 @@ Content-Transfer-Encoding: 7bit
 
 <p><a href="http://localhost:3000/users/confirmation?confirmation_token=eW2eCcotSsFRhkCzAuR3">Confirm my account</a></p>
 
+Started GET "/admin/17/edit" for ::1 at 2022-09-09 10:13:03 +0500
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by AdminController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin_controller.rb:36
+  Rendering admin/edit.html.erb within layouts/application
+  Rendered admin/_form.html.erb (316.6ms)
+  Rendered admin/edit.html.erb within layouts/application (320.4ms)
+Completed 500 Internal Server Error in 469ms (ActiveRecord: 15.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<#<Class:0x00005574fca52aa0>:0x00005574fc8619d0>):
+    1: <%= form_for @user do |f| %>
+    2:     <%= f.label :first_name %><br/>
+    3:     <%= f.text_field :first_name %><br>
+    4:     <br>
+  
+app/views/admin/_form.html.erb:1:in `_app_views_admin__form_html_erb__3535137916498324763_20760'
+app/views/admin/edit.html.erb:3:in `_app_views_admin_edit_html_erb__664565229402262086_20740'
+Started GET "/admin" for ::1 at 2022-09-09 10:13:13 +0500
+Processing by AdminController#index as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:17
+  Rendered admin/index.html.erb within layouts/application (123.4ms)
+Completed 200 OK in 662ms (Views: 648.7ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/admin" for ::1 at 2022-09-09 10:24:09 +0500
+Processing by AdminController#index as HTML
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:17
+  Rendered admin/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 110ms (Views: 90.5ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/admin/17/edit" for ::1 at 2022-09-09 10:24:11 +0500
+Processing by AdminController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin_controller.rb:36
+  Rendering admin/edit.html.erb within layouts/application
+  Rendered admin/_form.html.erb (226.4ms)
+  Rendered admin/edit.html.erb within layouts/application (230.2ms)
+Completed 500 Internal Server Error in 250ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<#<Class:0x00005574fca52aa0>:0x00007f2314ad3228>):
+    1: <%= form_for (@user) do |f| %>
+    2:     <%= f.label :first_name %><br/>
+    3:     <%= f.text_field :first_name %><br>
+    4:     <br>
+  
+app/views/admin/_form.html.erb:1:in `_app_views_admin__form_html_erb__3535137916498324763_21920'
+app/views/admin/edit.html.erb:3:in `_app_views_admin_edit_html_erb__664565229402262086_21900'
+Started GET "/admin" for ::1 at 2022-09-09 10:24:18 +0500
+Processing by AdminController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/index.html.erb:17
+  Rendered admin/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 119ms (Views: 108.3ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/admin" for ::1 at 2022-09-09 10:37:29 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/admin"):
+  
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/users" for ::1 at 2022-09-09 10:37:36 +0500
+  
+ActionController::RoutingError (uninitialized constant Admin::UsersController):
+  
+activesupport (5.2.8.1) lib/active_support/inflector/methods.rb:285:in `const_get'
+activesupport (5.2.8.1) lib/active_support/inflector/methods.rb:285:in `block in constantize'
+activesupport (5.2.8.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.8.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.8.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.8.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.8.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.8.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/users/" for ::1 at 2022-09-09 10:37:48 +0500
+  
+ActionController::RoutingError (uninitialized constant Admin::UsersController):
+  
+activesupport (5.2.8.1) lib/active_support/inflector/methods.rb:285:in `const_get'
+activesupport (5.2.8.1) lib/active_support/inflector/methods.rb:285:in `block in constantize'
+activesupport (5.2.8.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.8.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.8.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.8.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.8.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.8.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/users/" for ::1 at 2022-09-09 11:03:47 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  Rendered admin/users/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 146ms (ActiveRecord: 34.6ms)
+
+
+  
+SyntaxError (/home/usman/campencounters/app/views/admin/users/index.html.erb:28: syntax error, unexpected tLABEL, expecting `do' or '{' or '('
+...lete ", admin_user_path method: :delete, data: { confirm: "A...
+...                        ^~~~~~~
+):
+  
+app/views/admin/users/index.html.erb:28: syntax error, unexpected tLABEL, expecting `do' or '{' or '('
+Started GET "/admin/users/" for ::1 at 2022-09-09 11:05:47 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:17
+  Rendered admin/users/index.html.erb within layouts/application (152.9ms)
+Completed 500 Internal Server Error in 175ms (ActiveRecord: 4.9ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"admin/users"}, missing required keys: [:id]):
+    23:       <td><%= user.country %></td>
+    24:       <td><%= user.email %></td>
+    25:       <td><%= user.type %></td>
+    26:       <td><%= link_to "View |", admin_user_path %></td>
+    27:       <td><%= link_to "Edit |", edit_admin_user_path %></td>
+    28:       <td><%= link_to "Delete ", admin_user_path , method: :delete, data: { confirm: "Are you sure?" } %></td>
+    29:     </tr>
+  
+app/views/admin/users/index.html.erb:26:in `block in _app_views_admin_users_index_html_erb__3152918092860714542_34400'
+app/views/admin/users/index.html.erb:17:in `_app_views_admin_users_index_html_erb__3152918092860714542_34400'
+Started GET "/admin/users/" for ::1 at 2022-09-09 11:07:24 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:17
+  Rendered admin/users/index.html.erb within layouts/application (19.2ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 5.7ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"admin/users", :id=>nil}, missing required keys: [:id]):
+    23:       <td><%= user.country %></td>
+    24:       <td><%= user.email %></td>
+    25:       <td><%= user.type %></td>
+    26:       <td><%= link_to "View |", admin_user_path(@user) %></td>
+    27:       <td><%= link_to "Edit |", edit_admin_user_path(@user) %></td>
+    28:       <td><%= link_to "Delete ", admin_user_path(@user) , method: :delete, data: { confirm: "Are you sure?" } %></td>
+    29:     </tr>
+  
+app/views/admin/users/index.html.erb:26:in `block in _app_views_admin_users_index_html_erb__3152918092860714542_34940'
+app/views/admin/users/index.html.erb:17:in `_app_views_admin_users_index_html_erb__3152918092860714542_34940'
+Started GET "/admin/users" for ::1 at 2022-09-09 11:09:44 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:17
+  Rendered admin/users/index.html.erb within layouts/application (125.2ms)
+Completed 500 Internal Server Error in 225ms (ActiveRecord: 16.6ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"admin/users", :id=>nil}, missing required keys: [:id]):
+    23:       <td><%= user.country %></td>
+    24:       <td><%= user.email %></td>
+    25:       <td><%= user.type %></td>
+    26:       <td><%= link_to "View |", admin_user_path(@user) %></td>
+    27:       <td><%= link_to "Edit |", edit_admin_user_path(@user) %></td>
+    28:       <td><%= link_to "Delete ", admin_user_path(@user) , method: :delete, data: { confirm: "Are you sure?" } %></td>
+    29:     </tr>
+  
+app/views/admin/users/index.html.erb:26:in `block in _app_views_admin_users_index_html_erb__3152918092860714542_40320'
+app/views/admin/users/index.html.erb:17:in `_app_views_admin_users_index_html_erb__3152918092860714542_40320'
+Started GET "/admin/users" for ::1 at 2022-09-09 11:12:59 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 95ms (ActiveRecord: 18.3ms)
+
+
+  
+ArgumentError (The method .order() must contain arguments.):
+  
+app/controllers/admin/users_controller.rb:5:in `index'
+Started GET "/admin/users" for ::1 at 2022-09-09 11:13:18 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:17
+  Rendered admin/users/index.html.erb within layouts/application (164.8ms)
+Completed 500 Internal Server Error in 248ms (ActiveRecord: 15.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"admin/users", :id=>nil}, missing required keys: [:id]):
+    23:       <td><%= user.country %></td>
+    24:       <td><%= user.email %></td>
+    25:       <td><%= user.type %></td>
+    26:       <td><%= link_to "View |", admin_user_path(@user) %></td>
+    27:       <td><%= link_to "Edit |", edit_admin_user_path(@user) %></td>
+    28:       <td><%= link_to "Delete ", admin_user_path(@user) , method: :delete, data: { confirm: "Are you sure?" } %></td>
+    29:     </tr>
+  
+app/views/admin/users/index.html.erb:26:in `block in _app_views_admin_users_index_html_erb__3152918092860714542_51080'
+app/views/admin/users/index.html.erb:17:in `_app_views_admin_users_index_html_erb__3152918092860714542_51080'
+Started GET "/admin/users" for ::1 at 2022-09-09 11:15:16 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:17
+  Rendered admin/users/index.html.erb within layouts/application (12.8ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 8.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"admin/users"}, missing required keys: [:id]):
+    23:       <td><%= user.country %></td>
+    24:       <td><%= user.email %></td>
+    25:       <td><%= user.type %></td>
+    26:       <td><%= link_to "View |", admin_user_path %></td>
+    27:       <td><%= link_to "Edit |", edit_admin_user_path %></td>
+    28:       <td><%= link_to "Delete ", admin_user_path , method: :delete, data: { confirm: "Are you sure?" } %></td>
+    29:     </tr>
+  
+app/views/admin/users/index.html.erb:26:in `block in _app_views_admin_users_index_html_erb__3152918092860714542_51620'
+app/views/admin/users/index.html.erb:17:in `_app_views_admin_users_index_html_erb__3152918092860714542_51620'
+Started GET "/admin/users" for ::1 at 2022-09-09 11:16:14 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:17
+  Rendered admin/users/index.html.erb within layouts/application (14.5ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 2.6ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"admin/users"}, missing required keys: [:id]):
+    24:       <td><%= user.email %></td>
+    25:       <td><%= user.type %></td>
+    26:       <td><%= link_to "View |", admin_user_path(user) %></td>
+    27:       <td><%= link_to "Edit |", edit_admin_user_path %></td>
+    28:       <td><%= link_to "Delete ", admin_user_path , method: :delete, data: { confirm: "Are you sure?" } %></td>
+    29:     </tr>
+    30:   <%end%>
+  
+app/views/admin/users/index.html.erb:27:in `block in _app_views_admin_users_index_html_erb__3152918092860714542_52140'
+app/views/admin/users/index.html.erb:17:in `_app_views_admin_users_index_html_erb__3152918092860714542_52140'
+Started GET "/admin/users" for ::1 at 2022-09-09 11:16:27 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:17
+  Rendered admin/users/index.html.erb within layouts/application (20.2ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 4.4ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"admin/users"}, missing required keys: [:id]):
+    25:       <td><%= user.type %></td>
+    26:       <td><%= link_to "View |", admin_user_path(user) %></td>
+    27:       <td><%= link_to "Edit |", edit_admin_user_path(user) %></td>
+    28:       <td><%= link_to "Delete ", admin_user_path , method: :delete, data: { confirm: "Are you sure?" } %></td>
+    29:     </tr>
+    30:   <%end%>
+    31:  </tbody>
+  
+app/views/admin/users/index.html.erb:28:in `block in _app_views_admin_users_index_html_erb__3152918092860714542_52700'
+app/views/admin/users/index.html.erb:17:in `_app_views_admin_users_index_html_erb__3152918092860714542_52700'
+Started GET "/admin/users" for ::1 at 2022-09-09 11:16:46 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:17
+  Rendered admin/users/index.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 6645ms (Views: 6631.8ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/admin/users/17/edit" for ::1 at 2022-09-09 11:17:06 +0500
+Processing by Admin::UsersController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:32
+  Rendering admin/users/edit.html.erb within layouts/application
+  Rendered admin/users/_form.html.erb (354.0ms)
+  Rendered admin/users/edit.html.erb within layouts/application (357.8ms)
+Completed 500 Internal Server Error in 414ms (ActiveRecord: 14.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<#<Class:0x00007f231c19e970>:0x00007f2326498298>):
+    1: <%= form_for (@user) do |f| %>
+    2:     <%= f.label :first_name %><br/>
+    3:     <%= f.text_field :first_name %><br>
+    4:     <br>
+  
+app/views/admin/users/_form.html.erb:1:in `_app_views_admin_users__form_html_erb__1501341928321404606_53340'
+app/views/admin/users/edit.html.erb:3:in `_app_views_admin_users_edit_html_erb__3517791536196513989_53320'
+Started GET "/admin/users/17/edit" for ::1 at 2022-09-09 11:20:03 +0500
+Processing by Admin::UsersController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:32
+  Rendering admin/users/edit.html.erb within layouts/application
+  Rendered admin/users/_form.html.erb (181.7ms)
+  Rendered admin/users/edit.html.erb within layouts/application (188.4ms)
+Completed 200 OK in 371ms (Views: 350.0ms | ActiveRecord: 4.0ms)
+
+
+Started PATCH "/admin/users/17" for ::1 at 2022-09-09 11:20:18 +0500
+Processing by Admin::UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2pLeJlnYWmmkCOTxcDfzSeuWgAc4zLmZKJVn422sfboieZhYQ2wX4rP4Zbcymj5hNS6sGbHoUF7Aewxm4jLSg==", "user"=>{"first_name"=>"Usman", "last_name"=>"Noor", "phone_number"=>"", "country"=>"PK", "email"=>"usmannoor519@gmail.com"}, "commit"=>"Update User", "id"=>"17"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:32
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admin/users_controller.rb:15
+  [1m[36mUser Exists (3.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "usmannoor519@gmail.com"], ["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:15
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/admin/users_controller.rb:15
+  Rendering admin/users/edit.html.erb within layouts/application
+  Rendered admin/users/_form.html.erb (44.5ms)
+  Rendered admin/users/edit.html.erb within layouts/application (47.7ms)
+Completed 200 OK in 167ms (Views: 128.6ms | ActiveRecord: 7.4ms)
+
+
+Started PATCH "/admin/users/17" for ::1 at 2022-09-09 11:20:23 +0500
+Processing by Admin::UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SJUKwTJXitKO+mvDqEs46w8AG/NoUe2mOdAvxtv+bVardqfYyj1b5KKlqcaxQY/frHr7QxJ1fgEmc5ZozcAX6g==", "user"=>{"first_name"=>"Usman", "last_name"=>"Noor", "phone_number"=>"", "country"=>"PK", "email"=>"usmannoor519@gmail.com"}, "commit"=>"Update User", "id"=>"17"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:32
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admin/users_controller.rb:15
+  [1m[36mUser Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "usmannoor519@gmail.com"], ["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:15
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/admin/users_controller.rb:15
+  Rendering admin/users/edit.html.erb within layouts/application
+  Rendered admin/users/_form.html.erb (46.6ms)
+  Rendered admin/users/edit.html.erb within layouts/application (49.3ms)
+Completed 200 OK in 155ms (Views: 119.9ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/admin/users/17" for ::1 at 2022-09-09 11:34:45 +0500
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:45
+  Rendering admin/users/show.html.erb within layouts/application
+  Rendered admin/users/show.html.erb within layouts/application (516.7ms)
+Completed 500 Internal Server Error in 614ms (ActiveRecord: 14.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x00007f23145e8678>:0x00007f23145e4820>
+Did you mean?  @user):
+    4: <div><b>Phone Number: </b><%= @user.phone_number %></div>
+    5: <div><b>Country: </b><%= @user.country %></div>
+    6: <br>
+    7: <%= link_to 'Edit User', edit_admin_user_path(user) %>
+    8: <br>
+    9: <%= link_to 'Delete User', admin_user_path(user), method: :delete, data: { confirm: "Are you sure?" } %>
+  
+app/views/admin/users/show.html.erb:7:in `_app_views_admin_users_show_html_erb___225578128753793279_59340'
+Started GET "/admin/users/17" for ::1 at 2022-09-09 11:35:40 +0500
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:45
+  Rendering admin/users/show.html.erb within layouts/application
+  Rendered admin/users/show.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 176ms (Views: 145.3ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/admin/users/17/edit" for ::1 at 2022-09-09 11:35:50 +0500
+Processing by Admin::UsersController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:45
+  Rendering admin/users/edit.html.erb within layouts/application
+  Rendered admin/users/_form.html.erb (87.6ms)
+  Rendered admin/users/edit.html.erb within layouts/application (90.3ms)
+Completed 200 OK in 235ms (Views: 215.0ms | ActiveRecord: 2.8ms)
+
+
+Started PATCH "/admin/users/17" for ::1 at 2022-09-09 11:35:57 +0500
+Processing by Admin::UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/K5WKzpz0xUzFW9NmeHqQpxbSetua6G7sKTs9rlTz8HLZ/epw6tvB0y+vW/bfjIOJkVc6Fzl+rvyvSAXNHQwxA==", "user"=>{"first_name"=>"Usman", "last_name"=>"Noor", "phone_number"=>"", "country"=>"PK", "email"=>"usmannoor519@gmail.com"}, "commit"=>"Update User", "id"=>"17"}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:45
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admin/users_controller.rb:28
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "usmannoor519@gmail.com"], ["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:28
+  [1m[35m (1.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/admin/users_controller.rb:28
+  Rendering admin/users/edit.html.erb within layouts/application
+  Rendered admin/users/_form.html.erb (41.2ms)
+  Rendered admin/users/edit.html.erb within layouts/application (43.7ms)
+Completed 200 OK in 164ms (Views: 121.1ms | ActiveRecord: 7.2ms)
+
+
+Started PATCH "/admin/users/17" for ::1 at 2022-09-09 11:36:05 +0500
+Processing by Admin::UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yr3cZUmzELsYK0BrwKZJhGLxpKYPd64fNfeDfTT7EWgpXnF8sdnBjTR0gm7ZrP6wwYtEFnVTPbgqVDrTIsVr1A==", "user"=>{"first_name"=>"Usman", "last_name"=>"No", "phone_number"=>"", "country"=>"PK", "email"=>"usmannoor519@gmail.com"}, "commit"=>"Update User", "id"=>"17"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:45
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admin/users_controller.rb:28
+  [1m[36mUser Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "usmannoor519@gmail.com"], ["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:28
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/admin/users_controller.rb:28
+  Rendering admin/users/edit.html.erb within layouts/application
+  Rendered admin/users/_form.html.erb (51.3ms)
+  Rendered admin/users/edit.html.erb within layouts/application (54.3ms)
+Completed 200 OK in 178ms (Views: 139.1ms | ActiveRecord: 5.6ms)
+
+
+Started PATCH "/admin/users/17" for ::1 at 2022-09-09 11:36:13 +0500
+Processing by Admin::UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jiAy+OvhVneoGEecoWG0rSdw5V22TefTkOu38qPiuVltw5/hE4uHQYRHhZm4awOZhAoF7cxpdHSPSA5ctdzD5Q==", "user"=>{"first_name"=>"Usman", "last_name"=>"No", "phone_number"=>"", "country"=>"PK", "email"=>"usmannoor519@gmail.com"}, "commit"=>"Update User", "id"=>"17"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:45
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admin/users_controller.rb:28
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "usmannoor519@gmail.com"], ["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:28
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/admin/users_controller.rb:28
+  Rendering admin/users/edit.html.erb within layouts/application
+  Rendered admin/users/_form.html.erb (56.8ms)
+  Rendered admin/users/edit.html.erb within layouts/application (61.9ms)
+Completed 200 OK in 194ms (Views: 160.5ms | ActiveRecord: 5.1ms)
+
+
+Started PATCH "/admin/users/17" for ::1 at 2022-09-09 11:36:20 +0500
+Processing by Admin::UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t1CTFOqjjOlOyUNZR2I1382IqmXUh0KoVzTzBz5iyNxUsz4NEsld32KWgVxeaILrbvJK1a6j0Q9Il0qpKFyyYA==", "user"=>{"first_name"=>"Usman", "last_name"=>"No", "phone_number"=>"", "country"=>"PK", "email"=>"usmannoor519@gmail.com"}, "commit"=>"Update User", "id"=>"17"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:45
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admin/users_controller.rb:28
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "usmannoor519@gmail.com"], ["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:28
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/admin/users_controller.rb:28
+  Rendering admin/users/edit.html.erb within layouts/application
+  Rendered admin/users/_form.html.erb (47.8ms)
+  Rendered admin/users/edit.html.erb within layouts/application (50.2ms)
+Completed 200 OK in 173ms (Views: 128.0ms | ActiveRecord: 6.2ms)
+
+
+Started PATCH "/admin/users/17" for ::1 at 2022-09-09 11:36:24 +0500
+Processing by Admin::UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GVDZtjLJxmy5jtPqnQ/Gi8Sw++jzvCSbBiL5exHMM4T6s3SvyqMXWpXREe+EBXG/Z8obWImYtzwZgUDVB/JJOA==", "user"=>{"first_name"=>"Usman", "last_name"=>"No", "phone_number"=>"", "country"=>"PK", "email"=>"usmannoor519@gmail.com"}, "commit"=>"Update User", "id"=>"17"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:45
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admin/users_controller.rb:28
+  [1m[36mUser Exists (2.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "usmannoor519@gmail.com"], ["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:28
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/admin/users_controller.rb:28
+  Rendering admin/users/edit.html.erb within layouts/application
+  Rendered admin/users/_form.html.erb (35.2ms)
+  Rendered admin/users/edit.html.erb within layouts/application (39.2ms)
+Completed 200 OK in 166ms (Views: 120.6ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/admin/users/17" for ::1 at 2022-09-09 11:36:28 +0500
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:45
+  Rendering admin/users/show.html.erb within layouts/application
+  Rendered admin/users/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 132ms (Views: 121.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/admin/users/17/edit" for ::1 at 2022-09-09 11:36:34 +0500
+Processing by Admin::UsersController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:45
+  Rendering admin/users/edit.html.erb within layouts/application
+  Rendered admin/users/_form.html.erb (41.0ms)
+  Rendered admin/users/edit.html.erb within layouts/application (44.2ms)
+Completed 200 OK in 131ms (Views: 116.3ms | ActiveRecord: 2.0ms)
+
+
+Started PATCH "/admin/users/17" for ::1 at 2022-09-09 11:37:01 +0500
+Processing by Admin::UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KLz4z9vRNTLvH9ZR6QfsKgl7Q9FEO3TmutqLwiPnezAfdVlNIgmJIJC0BHOrmDRms2VW0na1L+b4w0cjrsCENQ==", "user"=>{"first_name"=>"Usman", "last_name"=>"Nooor", "phone_number"=>"03214004773", "country"=>"PK", "email"=>"usmannoor519@gmail.com"}, "commit"=>"Update User", "id"=>"17"}
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:45
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admin/users_controller.rb:28
+  [1m[36mUser Exists (3.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "usmannoor519@gmail.com"], ["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:28
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/admin/users_controller.rb:28
+  Rendering admin/users/edit.html.erb within layouts/application
+  Rendered admin/users/_form.html.erb (49.3ms)
+  Rendered admin/users/edit.html.erb within layouts/application (54.7ms)
+Completed 200 OK in 201ms (Views: 151.5ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/admin/users" for ::1 at 2022-09-09 11:37:13 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:17
+  Rendered admin/users/index.html.erb within layouts/application (86.9ms)
+Completed 200 OK in 168ms (Views: 153.7ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/admin/users/17" for ::1 at 2022-09-09 11:37:14 +0500
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:45
+  Rendering admin/users/show.html.erb within layouts/application
+  Rendered admin/users/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 123ms (Views: 113.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/users/" for ::1 at 2022-09-09 11:37:18 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:17
+  Rendered admin/users/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 146ms (Views: 131.7ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/admin/users/17" for ::1 at 2022-09-09 11:37:22 +0500
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:45
+  Rendering admin/users/show.html.erb within layouts/application
+  Rendered admin/users/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 138ms (Views: 122.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/admin/users/17/edit" for ::1 at 2022-09-09 11:37:40 +0500
+Processing by Admin::UsersController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:45
+  Rendering admin/users/edit.html.erb within layouts/application
+  Rendered admin/users/_form.html.erb (45.5ms)
+  Rendered admin/users/edit.html.erb within layouts/application (50.2ms)
+Completed 200 OK in 157ms (Views: 145.1ms | ActiveRecord: 2.6ms)
+
+
