@@ -1,9 +1,0 @@
-<h3>First Name: <%= @user.first_name %></h3>
-<h3>Last Name: <%= @user.last_name %></h3>
-<h3>Email: <%= @user.email %></h3>
-<h3>Phone Number: <%= @user.phone_number %></h3>
-<h3>Country: <%= @user.country %></h3>
-<br>
-<%= link_to 'Edit User', edit_admin_path(@user) %>
-<br>
-<%= link_to 'Delete User', admin_path(@user), method: :delete, data: { confirm: "Are you sure?" } %>
