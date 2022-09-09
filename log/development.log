@@ -11643,3 +11643,141 @@ Processing by Admin::UsersController#index as HTML
 Completed 200 OK in 94ms (Views: 85.5ms | ActiveRecord: 1.8ms)
 
 
+Started GET "/admin/users?page=0" for ::1 at 2022-09-09 17:08:18 +0500
+  
+NoMethodError (undefined method `paginates_per' for User (call 'User.connection' to establish a connection):Class):
+  
+app/models/user.rb:4:in `<class:User>'
+app/models/user.rb:3:in `<main>'
+config/routes.rb:9:in `block in <main>'
+config/routes.rb:3:in `<main>'
+Started GET "/admin/users?page=0" for ::1 at 2022-09-09 17:09:30 +0500
+  [1m[35m (5.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"page"=>"0"}
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/admin/users/index.html.erb:21
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:39
+  Rendered admin/users/index.html.erb within layouts/application (36.4ms)
+Completed 200 OK in 1132ms (Views: 963.2ms | ActiveRecord: 20.9ms)
+
+
+Started GET "/admin/users?page=2" for ::1 at 2022-09-09 17:09:57 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (110.8ms)
+Completed 200 OK in 206ms (Views: 186.8ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/admin/users" for ::1 at 2022-09-09 17:10:00 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/admin/users/index.html.erb:21
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:39
+  Rendered admin/users/index.html.erb within layouts/application (36.8ms)
+Completed 200 OK in 165ms (Views: 148.9ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/admin/users?page=2" for ::1 at 2022-09-09 17:10:02 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 117ms (Views: 103.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/admin/users" for ::1 at 2022-09-09 17:10:04 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/admin/users/index.html.erb:21
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:39
+  Rendered admin/users/index.html.erb within layouts/application (42.5ms)
+Completed 200 OK in 126ms (Views: 108.8ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/admin/users" for ::1 at 2022-09-09 17:16:17 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/admin/users/index.html.erb:21
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:39
+  Rendered admin/users/index.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 125ms (Views: 102.6ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/admin/users" for ::1 at 2022-09-09 17:16:21 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/admin/users/index.html.erb:21
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:39
+  Rendered admin/users/index.html.erb within layouts/application (41.7ms)
+Completed 200 OK in 183ms (Views: 169.0ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/admin/users" for ::1 at 2022-09-09 17:19:00 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/admin/users/index.html.erb:21
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:39
+  Rendered admin/users/index.html.erb within layouts/application (45.9ms)
+Completed 200 OK in 147ms (Views: 129.3ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/admin/users?page=2" for ::1 at 2022-09-09 17:19:11 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (35.6ms)
+Completed 200 OK in 176ms (Views: 164.2ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/admin/users" for ::1 at 2022-09-09 17:19:16 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/admin/users/index.html.erb:21
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:39
+  Rendered admin/users/index.html.erb within layouts/application (33.9ms)
+Completed 200 OK in 113ms (Views: 100.5ms | ActiveRecord: 4.5ms)
+
+

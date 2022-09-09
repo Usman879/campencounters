@@ -6,9 +6,9 @@ class Admin::UsersController < ApplicationController
       @users = User.where("LOWER(first_name) LIKE ? OR LOWER(email) LIKE ? " , 
       "%#{params[:search_key]}%", "%#{params[:search_key]}%")
     else  
-      @users = User.all
+      @users = User.all.page(params[:page])
     end
-    
+
   end
 
   def new
