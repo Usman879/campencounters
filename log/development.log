@@ -9567,3 +9567,1611 @@ Processing by Admin::UsersController#edit as HTML
 Completed 200 OK in 157ms (Views: 145.1ms | ActiveRecord: 2.6ms)
 
 
+Started PATCH "/admin/users/17" for ::1 at 2022-09-09 13:06:10 +0500
+Processing by Admin::UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Kx7lZ+QM+ATGsbhZxg87Dz1Yq8V32CWRyDOiMNXAoZUc10TlHdREFrkaanuEkONDh0a+xkVWfpGKKm7RWOdekA==", "user"=>{"first_name"=>"Usman", "last_name"=>"Noor", "phone_number"=>"03011234567", "country"=>"PK", "email"=>"usmannoor519@gmail.com"}, "commit"=>"Update User", "id"=>"17"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:45
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admin/users_controller.rb:28
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "usmannoor519@gmail.com"], ["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:28
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/admin/users_controller.rb:28
+  Rendering admin/users/edit.html.erb within layouts/application
+  Rendered admin/users/_form.html.erb (40.6ms)
+  Rendered admin/users/edit.html.erb within layouts/application (43.7ms)
+Completed 200 OK in 208ms (Views: 174.5ms | ActiveRecord: 5.0ms)
+
+
+Started PATCH "/admin/users/17" for ::1 at 2022-09-09 13:06:14 +0500
+Processing by Admin::UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8IOtYGe6RxIZ6yn3nP1ypMhDHyVHVtSHegLdA3QE0ewTYAB5n9CWJDW06/KF98WQazn/lT1yRyBloWStYjqrUA==", "user"=>{"first_name"=>"Usman", "last_name"=>"Noor", "phone_number"=>"03011234567", "country"=>"PK", "email"=>"usmannoor519@gmail.com"}, "commit"=>"Update User", "id"=>"17"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:45
+  [1m[35m (3.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admin/users_controller.rb:28
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "usmannoor519@gmail.com"], ["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:28
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/admin/users_controller.rb:28
+  Rendering admin/users/edit.html.erb within layouts/application
+  Rendered admin/users/_form.html.erb (47.3ms)
+  Rendered admin/users/edit.html.erb within layouts/application (50.1ms)
+Completed 200 OK in 185ms (Views: 147.9ms | ActiveRecord: 6.7ms)
+
+
+Started PATCH "/admin/users/17" for ::1 at 2022-09-09 13:06:16 +0500
+Processing by Admin::UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ne7QeVzcllyuE7gwkJNh3Y3iuJ1vrwOax5HyzQWnREvWDX1gpLZHaoJMejWJmdbpLphYLRWLkD3YMktjE5k+9w==", "user"=>{"first_name"=>"Usman", "last_name"=>"Noor", "phone_number"=>"03011234567", "country"=>"PK", "email"=>"usmannoor519@gmail.com"}, "commit"=>"Update User", "id"=>"17"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:45
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admin/users_controller.rb:28
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "usmannoor519@gmail.com"], ["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:28
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/admin/users_controller.rb:28
+  Rendering admin/users/edit.html.erb within layouts/application
+  Rendered admin/users/_form.html.erb (35.3ms)
+  Rendered admin/users/edit.html.erb within layouts/application (37.8ms)
+Completed 200 OK in 158ms (Views: 121.5ms | ActiveRecord: 5.9ms)
+
+
+Started PATCH "/admin/users/17" for ::1 at 2022-09-09 13:06:17 +0500
+Processing by Admin::UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qsx2GNsOSkB8zNS/FIy2iPdlbp+yQwYp/lFQBUju3fNJL9sBI2SbdlCTFroNhgG8VB+OL8hnlY7h8umrXtCnTw==", "user"=>{"first_name"=>"Usman", "last_name"=>"Noor", "phone_number"=>"03011234567", "country"=>"PK", "email"=>"usmannoor519@gmail.com"}, "commit"=>"Update User", "id"=>"17"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:45
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admin/users_controller.rb:28
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "usmannoor519@gmail.com"], ["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:28
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/admin/users_controller.rb:28
+  Rendering admin/users/edit.html.erb within layouts/application
+  Rendered admin/users/_form.html.erb (50.0ms)
+  Rendered admin/users/edit.html.erb within layouts/application (55.2ms)
+Completed 200 OK in 177ms (Views: 142.8ms | ActiveRecord: 5.2ms)
+
+
+Started PATCH "/admin/users/17" for ::1 at 2022-09-09 13:06:17 +0500
+Processing by Admin::UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2KikCTz4h9afCY9DVL6Cx4yl7ZXp5HbcJ8BDvKOS+ak7SwkQxJJW4LNWTUZNtDXzL98NJZPA5Xs4Y/oStayDFQ==", "user"=>{"first_name"=>"Usman", "last_name"=>"Noor", "phone_number"=>"03011234567", "country"=>"PK", "email"=>"usmannoor519@gmail.com"}, "commit"=>"Update User", "id"=>"17"}
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:45
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admin/users_controller.rb:28
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "usmannoor519@gmail.com"], ["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:28
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/admin/users_controller.rb:28
+  Rendering admin/users/edit.html.erb within layouts/application
+  Rendered admin/users/_form.html.erb (41.6ms)
+  Rendered admin/users/edit.html.erb within layouts/application (44.1ms)
+Completed 200 OK in 173ms (Views: 138.2ms | ActiveRecord: 8.0ms)
+
+
+Started PATCH "/admin/users/17" for ::1 at 2022-09-09 13:06:19 +0500
+Processing by Admin::UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0An3BlcAyg8AyMhs0+G8tdXshW/Yt4dEO38TQUZGaYMz6lofr2obOSyXCmnK6wuBdpZl36KTFOMk3KrvUHgTPw==", "user"=>{"first_name"=>"Usman", "last_name"=>"Noor", "phone_number"=>"03011234567", "country"=>"PK", "email"=>"usmannoor519@gmail.com"}, "commit"=>"Update User", "id"=>"17"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:45
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admin/users_controller.rb:28
+  [1m[36mUser Exists (2.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "usmannoor519@gmail.com"], ["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:28
+  [1m[35m (1.9ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/admin/users_controller.rb:28
+  Rendering admin/users/edit.html.erb within layouts/application
+  Rendered admin/users/_form.html.erb (39.3ms)
+  Rendered admin/users/edit.html.erb within layouts/application (41.4ms)
+Completed 200 OK in 158ms (Views: 125.7ms | ActiveRecord: 7.9ms)
+
+
+Started PATCH "/admin/users/17" for ::1 at 2022-09-09 13:06:19 +0500
+Processing by Admin::UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1z6zus2F+NqCgKs2YaHoNHnlYPBUwh06XB+mtjoC05Q03R6jNe8p7K7faTN4q18A2p+AQC7mjp1DvB8YLDypKA==", "user"=>{"first_name"=>"Usman", "last_name"=>"Noor", "phone_number"=>"03011234567", "country"=>"PK", "email"=>"usmannoor519@gmail.com"}, "commit"=>"Update User", "id"=>"17"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:45
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admin/users_controller.rb:28
+  [1m[36mUser Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "usmannoor519@gmail.com"], ["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:28
+  [1m[35m (2.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/admin/users_controller.rb:28
+  Rendering admin/users/edit.html.erb within layouts/application
+  Rendered admin/users/_form.html.erb (39.9ms)
+  Rendered admin/users/edit.html.erb within layouts/application (42.8ms)
+Completed 200 OK in 155ms (Views: 124.0ms | ActiveRecord: 6.5ms)
+
+
+Started PATCH "/admin/users/17" for ::1 at 2022-09-09 13:06:20 +0500
+Processing by Admin::UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TacFT2ILn7X5ks5BV3hrVRt1N8K2ysdH8HU8yltrby6uRKhWmmFOg9XNDEROctxhuA/XcszuVODv1oVkTVUVkg==", "user"=>{"first_name"=>"Usman", "last_name"=>"Noor", "phone_number"=>"03011234567", "country"=>"PK", "email"=>"usmannoor519@gmail.com"}, "commit"=>"Update User", "id"=>"17"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:45
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admin/users_controller.rb:28
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "usmannoor519@gmail.com"], ["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:28
+  [1m[35m (1.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/admin/users_controller.rb:28
+  Rendering admin/users/edit.html.erb within layouts/application
+  Rendered admin/users/_form.html.erb (45.2ms)
+  Rendered admin/users/edit.html.erb within layouts/application (48.8ms)
+Completed 200 OK in 161ms (Views: 137.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/admin/users/17" for ::1 at 2022-09-09 13:06:24 +0500
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:45
+  Rendering admin/users/show.html.erb within layouts/application
+  Rendered admin/users/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 127ms (Views: 117.1ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/admin/users/17" for ::1 at 2022-09-09 13:06:40 +0500
+Processing by Admin::UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qzSyKkFORcZRx30JTC5NMrO/oNz7KABnBU0kOB+rIVVI1x8zuSSU8H2YvwxVJPoGEMVAbIEMk8Aa7p2WCZVb6Q==", "id"=>"17"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:45
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admin/users_controller.rb:37
+  [1m[36mUser Destroy (1.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 17]]
+  ↳ app/controllers/admin/users_controller.rb:37
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/admin/users_controller.rb:37
+Redirected to http://localhost:3000/
+Completed 302 Found in 38ms (ActiveRecord: 9.2ms)
+
+
+Started GET "/" for ::1 at 2022-09-09 13:06:40 +0500
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 9ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-09-09 13:06:40 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (6.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 139ms (Views: 116.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-09-09 13:06:48 +0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B7zduSAKtSPPKpzd7JHhXmyE4wizbNU2XrIupMXzAhvkX3Cg2GBkFeN1Xtj1m1Zqz/4DuMlIRpFBEZcK0814pw==", "user"=>{"email"=>"usmannoor519@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "usmannoor519@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 14ms (ActiveRecord: 2.3ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B7zduSAKtSPPKpzd7JHhXmyE4wizbNU2XrIupMXzAhvkX3Cg2GBkFeN1Xtj1m1Zqz/4DuMlIRpFBEZcK0814pw==", "user"=>{"email"=>"usmannoor519@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (4.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 413ms (Views: 95.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-09-09 13:06:57 +0500
+Processing by RegistrationController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (2.5ms)
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (54.2ms)
+Completed 200 OK in 125ms (Views: 121.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-09-09 13:07:30 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (9.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (36.5ms)
+Completed 200 OK in 193ms (Views: 189.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-09-09 13:07:40 +0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XNnme2EZBThSWSu/0DaBWPVKwQ+IagRcp85phHhM33OQch3xdYu/cRZ2a3+UVtZOrD2U2A2PM/yfSE+afD6T2g==", "user"=>{"email"=>"wasif@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "wasif@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["current_sign_in_at", "2022-09-09 08:07:41.217844"], ["sign_in_count", 2], ["updated_at", "2022-09-09 08:07:41.220945"], ["id", 24]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 322ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/" for ::1 at 2022-09-09 13:07:41 +0500
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 119ms (Views: 112.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/users" for ::1 at 2022-09-09 13:08:16 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:17
+  Rendered admin/users/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 203ms (Views: 174.8ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/admin/users/23" for ::1 at 2022-09-09 13:08:33 +0500
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:45
+  Rendering admin/users/show.html.erb within layouts/application
+  Rendered admin/users/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 137ms (Views: 124.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/users/23/edit" for ::1 at 2022-09-09 13:08:36 +0500
+Processing by Admin::UsersController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:45
+  Rendering admin/users/edit.html.erb within layouts/application
+  Rendered admin/users/_form.html.erb (242.9ms)
+  Rendered admin/users/edit.html.erb within layouts/application (246.0ms)
+Completed 500 Internal Server Error in 273ms (ActiveRecord: 2.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `admin_admin_path' for #<#<Class:0x00007f23145e8678>:0x00007f231c079c48>
+Did you mean?  admin_user_path):
+    1: <%= form_for [:admin, @user] do |f| %>
+    2:     <%= f.label :first_name %><br/>
+    3:     <%= f.text_field :first_name %><br>
+    4:     <br>
+  
+app/views/admin/users/_form.html.erb:1:in `_app_views_admin_users__form_html_erb__1501341928321404606_63220'
+app/views/admin/users/edit.html.erb:3:in `_app_views_admin_users_edit_html_erb__3517791536196513989_63200'
+Started GET "/admin/users/23" for ::1 at 2022-09-09 13:09:01 +0500
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:45
+  Rendering admin/users/show.html.erb within layouts/application
+  Rendered admin/users/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 179ms (Views: 167.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/users" for ::1 at 2022-09-09 13:09:14 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:17
+  Rendered admin/users/index.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 171ms (Views: 154.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/admin/users/23/edit" for ::1 at 2022-09-09 13:09:28 +0500
+Processing by Admin::UsersController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:45
+  Rendering admin/users/edit.html.erb within layouts/application
+  Rendered admin/users/_form.html.erb (238.8ms)
+  Rendered admin/users/edit.html.erb within layouts/application (249.9ms)
+Completed 500 Internal Server Error in 282ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `admin_admin_path' for #<#<Class:0x00007f23145e8678>:0x00007f2326d5d9f0>
+Did you mean?  admin_user_path):
+    1: <%= form_for [:admin, @user] do |f| %>
+    2:     <%= f.label :first_name %><br/>
+    3:     <%= f.text_field :first_name %><br>
+    4:     <br>
+  
+app/views/admin/users/_form.html.erb:1:in `_app_views_admin_users__form_html_erb__1501341928321404606_63980'
+app/views/admin/users/edit.html.erb:3:in `_app_views_admin_users_edit_html_erb__3517791536196513989_63960'
+Started GET "/admin/users" for ::1 at 2022-09-09 13:09:32 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:17
+  Rendered admin/users/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 192ms (Views: 178.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/admin/users/18/edit" for ::1 at 2022-09-09 13:09:34 +0500
+Processing by Admin::UsersController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:45
+  Rendering admin/users/edit.html.erb within layouts/application
+  Rendered admin/users/_form.html.erb (113.8ms)
+  Rendered admin/users/edit.html.erb within layouts/application (118.1ms)
+Completed 200 OK in 256ms (Views: 235.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/admin/users/26/edit" for ::1 at 2022-09-09 13:09:40 +0500
+Processing by Admin::UsersController#edit as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:45
+  Rendering admin/users/edit.html.erb within layouts/application
+  Rendered admin/users/_form.html.erb (319.0ms)
+  Rendered admin/users/edit.html.erb within layouts/application (322.4ms)
+Completed 500 Internal Server Error in 385ms (ActiveRecord: 3.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `admin_super_admin_path' for #<#<Class:0x00007f23145e8678>:0x00007f23261e4ad8>
+Did you mean?  admin_user_path):
+    1: <%= form_for [:admin, @user] do |f| %>
+    2:     <%= f.label :first_name %><br/>
+    3:     <%= f.text_field :first_name %><br>
+    4:     <br>
+  
+app/views/admin/users/_form.html.erb:1:in `_app_views_admin_users__form_html_erb__1501341928321404606_64740'
+app/views/admin/users/edit.html.erb:3:in `_app_views_admin_users_edit_html_erb__3517791536196513989_64720'
+Started GET "/admin/users" for ::1 at 2022-09-09 13:09:50 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:17
+  Rendered admin/users/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 178ms (Views: 171.2ms | ActiveRecord: 2.3ms)
+
+
+Started DELETE "/admin/users/23" for ::1 at 2022-09-09 13:10:06 +0500
+Processing by Admin::UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XlHAkexGzUsT+Z7W+58WiNRQpuWw+oIXmVWUFNHADkY59hOoLvqawUQsKFN3wMXmer49dj5ztCchuM2tIMhasg==", "id"=>"23"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:45
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admin/users_controller.rb:37
+  [1m[36mAdmin Destroy (2.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 23]]
+  ↳ app/controllers/admin/users_controller.rb:37
+  [1m[35m (9.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/admin/users_controller.rb:37
+Redirected to http://localhost:3000/
+Completed 302 Found in 39ms (ActiveRecord: 14.8ms)
+
+
+Started GET "/" for ::1 at 2022-09-09 13:10:06 +0500
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 146ms (Views: 136.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin" for ::1 at 2022-09-09 13:10:30 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/admin"):
+  
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/users" for ::1 at 2022-09-09 13:10:37 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:17
+  Rendered admin/users/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 187ms (Views: 167.7ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/admin/users/26/edit" for ::1 at 2022-09-09 13:10:44 +0500
+Processing by Admin::UsersController#edit as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:45
+  Rendering admin/users/edit.html.erb within layouts/application
+  Rendered admin/users/_form.html.erb (240.2ms)
+  Rendered admin/users/edit.html.erb within layouts/application (249.2ms)
+Completed 500 Internal Server Error in 286ms (ActiveRecord: 4.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `admin_super_admin_path' for #<#<Class:0x00007f23145e8678>:0x00007f231c1770c8>
+Did you mean?  admin_user_path):
+    1: <%= form_for [:admin, @user] do |f| %>
+    2:     <%= f.label :first_name %><br/>
+    3:     <%= f.text_field :first_name %><br>
+    4:     <br>
+  
+app/views/admin/users/_form.html.erb:1:in `_app_views_admin_users__form_html_erb__1501341928321404606_66080'
+app/views/admin/users/edit.html.erb:3:in `_app_views_admin_users_edit_html_erb__3517791536196513989_66060'
+Started GET "/admin/users" for ::1 at 2022-09-09 13:10:48 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (7.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:17
+  Rendered admin/users/index.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 187ms (Views: 163.4ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/admin/users/21" for ::1 at 2022-09-09 13:10:51 +0500
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:45
+  Rendering admin/users/show.html.erb within layouts/application
+  Rendered admin/users/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 130ms (Views: 118.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/users/21/edit" for ::1 at 2022-09-09 13:10:55 +0500
+Processing by Admin::UsersController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:45
+  Rendering admin/users/edit.html.erb within layouts/application
+  Rendered admin/users/_form.html.erb (70.0ms)
+  Rendered admin/users/edit.html.erb within layouts/application (76.8ms)
+Completed 200 OK in 264ms (Views: 243.8ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/admin/users/25/edit" for ::1 at 2022-09-09 13:11:23 +0500
+Processing by Admin::UsersController#edit as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:45
+  Rendering admin/users/edit.html.erb within layouts/application
+  Rendered admin/users/_form.html.erb (229.6ms)
+  Rendered admin/users/edit.html.erb within layouts/application (233.2ms)
+Completed 500 Internal Server Error in 252ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `admin_admin_path' for #<#<Class:0x00007f23145e8678>:0x00007f23263e0558>
+Did you mean?  admin_user_path):
+    1: <%= form_for [:admin, @user] do |f| %>
+    2:     <%= f.label :first_name %><br/>
+    3:     <%= f.text_field :first_name %><br>
+    4:     <br>
+  
+app/views/admin/users/_form.html.erb:1:in `_app_views_admin_users__form_html_erb__1501341928321404606_66920'
+app/views/admin/users/edit.html.erb:3:in `_app_views_admin_users_edit_html_erb__3517791536196513989_66900'
+Started GET "/admin/users" for ::1 at 2022-09-09 13:11:26 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:17
+  Rendered admin/users/index.html.erb within layouts/application (55.4ms)
+Completed 200 OK in 249ms (Views: 232.9ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/admin/users" for ::1 at 2022-09-09 14:56:42 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendered admin/users/index.html.erb within layouts/application (597.5ms)
+Completed 500 Internal Server Error in 676ms (ActiveRecord: 12.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `users_path' for #<#<Class:0x00007f231c2728b0>:0x00007f231c270b50>
+Did you mean?  user_session_path):
+    1: <h1>Listing Users</h1>
+    2: <form action="<%= users_path %>">
+    3:   <input type="text" name="search_key">
+    4:   <button type="submit">Search</button>
+    5: </form>
+  
+app/views/admin/users/index.html.erb:2:in `_app_views_admin_users_index_html_erb__3152918092860714542_72540'
+Started GET "/admin/users" for ::1 at 2022-09-09 14:58:31 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 192ms (Views: 166.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/admin/users?search_key=usman" for ::1 at 2022-09-09 14:58:41 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"usman"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (name LIKE '%usman%' OR email LIKE '%usman%')[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (11.6ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 5.9ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column "name" does not exist
+LINE 1: SELECT "users".* FROM "users" WHERE (name LIKE '%usman%' OR ...
+                                             ^
+: SELECT "users".* FROM "users" WHERE (name LIKE '%usman%' OR email LIKE '%usman%')):
+    18:     </tr>
+    19:   </thead>
+    20:  <tbody>
+    21:   <% @users.each do |user|%>
+    22:     <tr>
+    23:       <td><%= user.id %></td>
+    24:       <td><%= user.first_name %></td>
+  
+app/views/admin/users/index.html.erb:21:in `_app_views_admin_users_index_html_erb__3152918092860714542_73200'
+Started GET "/admin/users?search_key=usman" for ::1 at 2022-09-09 14:59:41 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"usman"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (10.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (first_name LIKE '%usman%' OR email LIKE '%usman%')[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 145ms (Views: 82.6ms | ActiveRecord: 17.5ms)
+
+
+Started GET "/admin/users?search_key=Usman" for ::1 at 2022-09-09 15:00:06 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"Usman"}
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (first_name LIKE '%Usman%' OR email LIKE '%Usman%')[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (79.6ms)
+Completed 200 OK in 219ms (Views: 183.5ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/admin/users?search_key=usman" for ::1 at 2022-09-09 15:00:14 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"usman"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (first_name LIKE '%usman%' OR email LIKE '%usman%')[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 142ms (Views: 131.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/admin/users?search_key=wasif%40gmail.com" for ::1 at 2022-09-09 15:00:43 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"wasif@gmail.com"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (first_name LIKE '%wasif@gmail.com%' OR email LIKE '%wasif@gmail.com%')[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 129ms (Views: 112.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/admin/users?search_key=usmannoor519%40gmail.com" for ::1 at 2022-09-09 15:00:56 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"usmannoor519@gmail.com"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (first_name LIKE '%usmannoor519@gmail.com%' OR email LIKE '%usmannoor519@gmail.com%')[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 122ms (Views: 111.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/users?search_key=usman" for ::1 at 2022-09-09 15:01:01 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"usman"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (first_name LIKE '%usman%' OR email LIKE '%usman%')[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 127ms (Views: 112.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/admin/users?search_key=usman" for ::1 at 2022-09-09 15:03:07 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"usman"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 5.5ms)
+
+
+  
+ActiveRecord::PreparedStatementInvalid (wrong number of bind variables (2 for 4) in: first_name LIKE ? OR last_name LIKE ? OR email LIKE ? OR id LIKE ?):
+  
+app/controllers/admin/users_controller.rb:6:in `index'
+Started GET "/admin/users?search_key=usman" for ::1 at 2022-09-09 15:05:46 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"usman"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (first_name LIKE '%usman%' OR last_name LIKE '%usman%')[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 154ms (Views: 91.7ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/admin/users?search_key=usman" for ::1 at 2022-09-09 15:05:54 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"usman"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (first_name LIKE '%usman%' OR last_name LIKE '%usman%')[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 118ms (Views: 104.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/admin/users?search_key=usman" for ::1 at 2022-09-09 15:06:02 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"usman"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (first_name LIKE '%usman%' OR last_name LIKE '%usman%')[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 179ms (Views: 155.3ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/admin/users?search_key=usman" for ::1 at 2022-09-09 15:06:21 +0500
+  
+SyntaxError (/home/usman/campencounters/app/controllers/admin/users_controller.rb:61: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/admin/users_controller.rb:61: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/admin/users?search_key=usman" for ::1 at 2022-09-09 15:07:13 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"usman"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (email LIKE '%usman%' OR id LIKE '%usman%')[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 10.8ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedFunction: ERROR:  operator does not exist: bigint ~~ unknown
+LINE 1: ....* FROM "users" WHERE (email LIKE '%usman%' OR id LIKE '%usm...
+                                                             ^
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+: SELECT "users".* FROM "users" WHERE (email LIKE '%usman%' OR id LIKE '%usman%')):
+    18:     </tr>
+    19:   </thead>
+    20:  <tbody>
+    21:   <% @users.each do |user|%>
+    22:     <tr>
+    23:       <td><%= user.id %></td>
+    24:       <td><%= user.first_name %></td>
+  
+app/views/admin/users/index.html.erb:21:in `_app_views_admin_users_index_html_erb__3152918092860714542_100180'
+Started GET "/admin/users?search_key=usmannoor519%40gmail.com" for ::1 at 2022-09-09 15:07:37 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"usmannoor519@gmail.com"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (email LIKE '%usmannoor519@gmail.com%' OR id LIKE '%usmannoor519@gmail.com%')[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (11.4ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 5.0ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedFunction: ERROR:  operator does not exist: bigint ~~ unknown
+LINE 1: ...HERE (email LIKE '%usmannoor519@gmail.com%' OR id LIKE '%usm...
+                                                             ^
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+: SELECT "users".* FROM "users" WHERE (email LIKE '%usmannoor519@gmail.com%' OR id LIKE '%usmannoor519@gmail.com%')):
+    18:     </tr>
+    19:   </thead>
+    20:  <tbody>
+    21:   <% @users.each do |user|%>
+    22:     <tr>
+    23:       <td><%= user.id %></td>
+    24:       <td><%= user.first_name %></td>
+  
+app/views/admin/users/index.html.erb:21:in `_app_views_admin_users_index_html_erb__3152918092860714542_100700'
+Started GET "/admin/users" for ::1 at 2022-09-09 15:07:45 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  Rendered admin/users/index.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    18:     </tr>
+    19:   </thead>
+    20:  <tbody>
+    21:   <% @users.each do |user|%>
+    22:     <tr>
+    23:       <td><%= user.id %></td>
+    24:       <td><%= user.first_name %></td>
+  
+app/views/admin/users/index.html.erb:21:in `_app_views_admin_users_index_html_erb__3152918092860714542_101220'
+Started GET "/admin/users" for ::1 at 2022-09-09 15:07:59 +0500
+  
+SyntaxError (/home/usman/campencounters/app/controllers/admin/users_controller.rb:59: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/admin/users_controller.rb:59: syntax error, unexpected `end', expecting end-of-input
+Started GET "/admin/users" for ::1 at 2022-09-09 15:08:30 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (84.9ms)
+Completed 200 OK in 246ms (Views: 186.0ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/admin/users?search_key=usmannoor519%40gmail.com" for ::1 at 2022-09-09 15:08:39 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"usmannoor519@gmail.com"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (first_name LIKE '%usmannoor519@gmail.com%' OR last_name LIKE '%usmannoor519@gmail.com%')[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 119ms (Views: 106.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/users?search_key=wasif%40gmail.com" for ::1 at 2022-09-09 15:08:44 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"wasif@gmail.com"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (first_name LIKE '%wasif@gmail.com%' OR last_name LIKE '%wasif@gmail.com%')[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 122ms (Views: 108.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/admin/users?search_key=usman" for ::1 at 2022-09-09 15:08:50 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"usman"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (first_name LIKE '%usman%' OR last_name LIKE '%usman%')[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 119ms (Views: 105.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/admin/users?search_key=usman" for ::1 at 2022-09-09 15:09:46 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"usman"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (email LIKE '%usman%' OR id LIKE '%usman%')[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (11.4ms)
+Completed 500 Internal Server Error in 111ms (ActiveRecord: 11.8ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedFunction: ERROR:  operator does not exist: bigint ~~ unknown
+LINE 1: ....* FROM "users" WHERE (email LIKE '%usman%' OR id LIKE '%usm...
+                                                             ^
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+: SELECT "users".* FROM "users" WHERE (email LIKE '%usman%' OR id LIKE '%usman%')):
+    18:     </tr>
+    19:   </thead>
+    20:  <tbody>
+    21:   <% @users.each do |user|%>
+    22:     <tr>
+    23:       <td><%= user.id %></td>
+    24:       <td><%= user.first_name %></td>
+  
+app/views/admin/users/index.html.erb:21:in `_app_views_admin_users_index_html_erb__3152918092860714542_117380'
+Started GET "/admin/users" for ::1 at 2022-09-09 15:09:56 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (133.1ms)
+Completed 200 OK in 230ms (Views: 216.4ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/admin/users?search_key=wasif%40gmail.com" for ::1 at 2022-09-09 15:10:02 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"wasif@gmail.com"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (email LIKE '%wasif@gmail.com%' OR id LIKE '%wasif@gmail.com%')[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (12.9ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 6.0ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedFunction: ERROR:  operator does not exist: bigint ~~ unknown
+LINE 1: ...sers" WHERE (email LIKE '%wasif@gmail.com%' OR id LIKE '%was...
+                                                             ^
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+: SELECT "users".* FROM "users" WHERE (email LIKE '%wasif@gmail.com%' OR id LIKE '%wasif@gmail.com%')):
+    18:     </tr>
+    19:   </thead>
+    20:  <tbody>
+    21:   <% @users.each do |user|%>
+    22:     <tr>
+    23:       <td><%= user.id %></td>
+    24:       <td><%= user.first_name %></td>
+  
+app/views/admin/users/index.html.erb:21:in `_app_views_admin_users_index_html_erb__3152918092860714542_118000'
+Started GET "/admin/users?search_key=usman" for ::1 at 2022-09-09 15:10:24 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"usman"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (email LIKE '%usman%' OR id LIKE '%usman%')[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (12.7ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 2.9ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedFunction: ERROR:  operator does not exist: bigint ~~ unknown
+LINE 1: ....* FROM "users" WHERE (email LIKE '%usman%' OR id LIKE '%usm...
+                                                             ^
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+: SELECT "users".* FROM "users" WHERE (email LIKE '%usman%' OR id LIKE '%usman%')):
+    18:     </tr>
+    19:   </thead>
+    20:  <tbody>
+    21:   <% @users.each do |user|%>
+    22:     <tr>
+    23:       <td><%= user.id %></td>
+    24:       <td><%= user.first_name %></td>
+  
+app/views/admin/users/index.html.erb:21:in `_app_views_admin_users_index_html_erb__3152918092860714542_118520'
+Started GET "/admin/users" for ::1 at 2022-09-09 15:10:35 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (92.1ms)
+Completed 200 OK in 233ms (Views: 174.3ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/admin/users?search_key=Usman" for ::1 at 2022-09-09 15:10:39 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"Usman"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (first_name LIKE '%Usman%' OR last_name LIKE '%Usman%')[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 124ms (Views: 107.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/admin/users?search_key=Noor" for ::1 at 2022-09-09 15:11:02 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"Noor"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (first_name LIKE '%Noor%' OR last_name LIKE '%Noor%')[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 130ms (Views: 118.8ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/admin/users?search_key=super" for ::1 at 2022-09-09 15:11:23 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"super"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (first_name LIKE '%super%' OR last_name LIKE '%super%')[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 122ms (Views: 113.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/users" for ::1 at 2022-09-09 15:18:20 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (92.3ms)
+Completed 200 OK in 267ms (Views: 193.8ms | ActiveRecord: 20.0ms)
+
+
+Started GET "/admin/users?search_key=usman" for ::1 at 2022-09-09 15:18:25 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"usman"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (LOWER(first_name) LIKE '%usman%' OR LOWER(last_name) LIKE '%usman%')[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 140ms (Views: 123.7ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/admin/users?search_key=noor" for ::1 at 2022-09-09 15:18:33 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"noor"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (LOWER(first_name) LIKE '%noor%' OR LOWER(last_name) LIKE '%noor%')[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 109ms (Views: 96.2ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/admin/users?search_key=noo" for ::1 at 2022-09-09 15:18:49 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"noo"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (LOWER(first_name) LIKE '%noo%' OR LOWER(last_name) LIKE '%noo%')[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 138ms (Views: 119.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/admin/users?search_key=ad" for ::1 at 2022-09-09 15:18:59 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"ad"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (LOWER(first_name) LIKE '%ad%' OR LOWER(last_name) LIKE '%ad%')[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 114ms (Views: 96.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/admin/users?search_key=admin" for ::1 at 2022-09-09 15:19:09 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"admin"}
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (LOWER(first_name) LIKE '%admin%' OR LOWER(last_name) LIKE '%admin%')[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 106ms (Views: 91.4ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/admin/users?search_key=usman" for ::1 at 2022-09-09 15:19:28 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"usman"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (LOWER(first_name) LIKE '%usman%' OR LOWER(last_name) LIKE '%usman%')[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 126ms (Views: 114.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/admin/users" for ::1 at 2022-09-09 15:19:36 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (36.4ms)
+Completed 200 OK in 194ms (Views: 177.4ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/admin/users" for ::1 at 2022-09-09 15:30:10 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (99.4ms)
+Completed 200 OK in 274ms (Views: 187.7ms | ActiveRecord: 18.7ms)
+
+
+Started GET "/admin/users?search_key=19" for ::1 at 2022-09-09 15:30:17 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"19"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (LOWER(first_name) LIKE '%19%' OR LOWER(last_name) LIKE '%19%' OR LOWER(email) LIKE '%19%' OR id LIKE '%19%')[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (11.8ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 6.1ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedFunction: ERROR:  operator does not exist: bigint ~~ unknown
+LINE 1: ...me) LIKE '%19%' OR LOWER(email) LIKE '%19%' OR id LIKE '%19%...
+                                                             ^
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+: SELECT "users".* FROM "users" WHERE (LOWER(first_name) LIKE '%19%' OR LOWER(last_name) LIKE '%19%' OR LOWER(email) LIKE '%19%' OR id LIKE '%19%')):
+    18:     </tr>
+    19:   </thead>
+    20:  <tbody>
+    21:   <% @users.each do |user|%>
+    22:     <tr>
+    23:       <td><%= user.id %></td>
+    24:       <td><%= user.first_name %></td>
+  
+app/views/admin/users/index.html.erb:21:in `_app_views_admin_users_index_html_erb__3152918092860714542_135060'
+Started GET "/admin/users?search_key=wasif%40gmail.com" for ::1 at 2022-09-09 15:30:38 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"wasif@gmail.com"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (LOWER(first_name) LIKE '%wasif@gmail.com%' OR LOWER(last_name) LIKE '%wasif@gmail.com%' OR LOWER(email) LIKE '%wasif@gmail.com%' OR id LIKE '%wasif@gmail.com%')[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (14.4ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 7.3ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedFunction: ERROR:  operator does not exist: bigint ~~ unknown
+LINE 1: ...%' OR LOWER(email) LIKE '%wasif@gmail.com%' OR id LIKE '%was...
+                                                             ^
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+: SELECT "users".* FROM "users" WHERE (LOWER(first_name) LIKE '%wasif@gmail.com%' OR LOWER(last_name) LIKE '%wasif@gmail.com%' OR LOWER(email) LIKE '%wasif@gmail.com%' OR id LIKE '%wasif@gmail.com%')):
+    18:     </tr>
+    19:   </thead>
+    20:  <tbody>
+    21:   <% @users.each do |user|%>
+    22:     <tr>
+    23:       <td><%= user.id %></td>
+    24:       <td><%= user.first_name %></td>
+  
+app/views/admin/users/index.html.erb:21:in `_app_views_admin_users_index_html_erb__3152918092860714542_135580'
+Started GET "/admin/users?search_key=usman" for ::1 at 2022-09-09 15:31:22 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"usman"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (8.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (LOWER(first_name) LIKE '%usman%' OR LOWER(last_name) LIKE '%usman%' OR LOWER(email) LIKE '%usman%' OR id LIKE '%usman%')[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (22.3ms)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 10.7ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedFunction: ERROR:  operator does not exist: bigint ~~ unknown
+LINE 1: ...KE '%usman%' OR LOWER(email) LIKE '%usman%' OR id LIKE '%usm...
+                                                             ^
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+: SELECT "users".* FROM "users" WHERE (LOWER(first_name) LIKE '%usman%' OR LOWER(last_name) LIKE '%usman%' OR LOWER(email) LIKE '%usman%' OR id LIKE '%usman%')):
+    18:     </tr>
+    19:   </thead>
+    20:  <tbody>
+    21:   <% @users.each do |user|%>
+    22:     <tr>
+    23:       <td><%= user.id %></td>
+    24:       <td><%= user.first_name %></td>
+  
+app/views/admin/users/index.html.erb:21:in `_app_views_admin_users_index_html_erb__3152918092860714542_136100'
+Started GET "/admin/users" for ::1 at 2022-09-09 15:32:10 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (107.7ms)
+Completed 200 OK in 275ms (Views: 196.7ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/admin/users?search_key=usman" for ::1 at 2022-09-09 15:32:15 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"usman"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (LOWER(first_name) LIKE '%usman%' OR LOWER(last_name) LIKE '%usman%' )[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 124ms (Views: 114.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/admin/users" for ::1 at 2022-09-09 15:32:29 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (103.4ms)
+Completed 200 OK in 312ms (Views: 225.2ms | ActiveRecord: 15.8ms)
+
+
+Started GET "/admin/users?search_key=wasif%40gmail.com" for ::1 at 2022-09-09 15:32:33 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"wasif@gmail.com"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (LOWER(email) LIKE '%wasif@gmail.com%' OR LOWER(last_name) LIKE '%wasif@gmail.com%' )[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 171ms (Views: 161.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/admin/users?search_key=wasif%40gmail.comadmin" for ::1 at 2022-09-09 15:32:44 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"wasif@gmail.comadmin"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (LOWER(email) LIKE '%wasif@gmail.comadmin%' OR LOWER(last_name) LIKE '%wasif@gmail.comadmin%' )[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 216ms (Views: 202.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/admin/users?search_key=admin" for ::1 at 2022-09-09 15:32:48 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"admin"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (LOWER(email) LIKE '%admin%' OR LOWER(last_name) LIKE '%admin%' )[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 175ms (Views: 159.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/admin/users?search_key=super" for ::1 at 2022-09-09 15:32:59 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"super"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (LOWER(email) LIKE '%super%' OR LOWER(last_name) LIKE '%super%' )[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 143ms (Views: 125.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/admin/users?search_key=asd" for ::1 at 2022-09-09 15:33:11 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"asd"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (LOWER(email) LIKE '%asd%' OR LOWER(last_name) LIKE '%asd%' )[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 125ms (Views: 113.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/admin/users?search_key=asd" for ::1 at 2022-09-09 15:33:15 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"asd"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (LOWER(email) LIKE '%asd%' OR LOWER(last_name) LIKE '%asd%' )[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 110ms (Views: 100.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/admin/users" for ::1 at 2022-09-09 15:33:24 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 150ms (Views: 138.3ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/admin/users?search_key=dfs" for ::1 at 2022-09-09 15:33:30 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"dfs"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (LOWER(email) LIKE '%dfs%' OR LOWER(last_name) LIKE '%dfs%' )[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 151ms (Views: 134.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/admin/users?search_key=dgf" for ::1 at 2022-09-09 15:33:41 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"dgf"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (LOWER(email) LIKE '%dgf%' OR LOWER(last_name) LIKE '%dgf%' )[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 136ms (Views: 119.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/admin/users" for ::1 at 2022-09-09 15:33:51 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 138ms (Views: 124.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/users" for ::1 at 2022-09-09 15:35:56 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 163ms (Views: 140.0ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/admin/users" for ::1 at 2022-09-09 15:38:58 +0500
+  
+SyntaxError (/home/usman/campencounters/app/controllers/admin/users_controller.rb:61: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/admin/users_controller.rb:61: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/admin/users" for ::1 at 2022-09-09 15:39:18 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  Rendered admin/users/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 11.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    18:     </tr>
+    19:   </thead>
+    20:  <tbody>
+    21:   <% @users.each do |user|%>
+    22:     <tr>
+    23:       <td><%= user.id %></td>
+    24:       <td><%= user.first_name %></td>
+  
+app/views/admin/users/index.html.erb:21:in `_app_views_admin_users_index_html_erb__3152918092860714542_158040'
+Started GET "/admin/users" for ::1 at 2022-09-09 15:40:58 +0500
+  
+SyntaxError (/home/usman/campencounters/app/controllers/admin/users_controller.rb:61: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/admin/users_controller.rb:61: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/admin/users" for ::1 at 2022-09-09 15:41:16 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:22
+  Rendered admin/users/index.html.erb within layouts/application (126.4ms)
+Completed 200 OK in 343ms (Views: 216.5ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/admin/users?search_key=usman&search1_key=" for ::1 at 2022-09-09 15:41:24 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"usman", "search1_key"=>""}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (LOWER(first_name) LIKE '%usman%' OR LOWER(last_name) LIKE '%usman%' )[0m
+  ↳ app/views/admin/users/index.html.erb:22
+  Rendered admin/users/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 164ms (Views: 143.0ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/admin/users?search_key=usman&search1_key=26" for ::1 at 2022-09-09 15:42:44 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"usman", "search1_key"=>"26"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (LOWER(first_name) LIKE '%usman%' OR LOWER(last_name) LIKE '%usman%' )[0m
+  ↳ app/views/admin/users/index.html.erb:22
+  Rendered admin/users/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 154ms (Views: 131.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/admin/users?search_key=&search1_key=26" for ::1 at 2022-09-09 15:42:59 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"", "search1_key"=>"26"}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (LOWER(first_name) LIKE '%%' OR LOWER(last_name) LIKE '%%' )[0m
+  ↳ app/views/admin/users/index.html.erb:22
+  Rendered admin/users/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 149ms (Views: 132.4ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/admin/users?search_key=&search1_key=26" for ::1 at 2022-09-09 15:43:05 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"", "search1_key"=>"26"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (LOWER(first_name) LIKE '%%' OR LOWER(last_name) LIKE '%%' )[0m
+  ↳ app/views/admin/users/index.html.erb:22
+  Rendered admin/users/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 115ms (Views: 102.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/admin/users?search_key=&search1_key=11" for ::1 at 2022-09-09 15:43:15 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"", "search1_key"=>"11"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (LOWER(first_name) LIKE '%%' OR LOWER(last_name) LIKE '%%' )[0m
+  ↳ app/views/admin/users/index.html.erb:22
+  Rendered admin/users/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 141ms (Views: 125.5ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/admin/users?search_key=usman&search1_key=11" for ::1 at 2022-09-09 15:43:30 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"usman", "search1_key"=>"11"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (LOWER(first_name) LIKE '%usman%' OR LOWER(last_name) LIKE '%usman%' )[0m
+  ↳ app/views/admin/users/index.html.erb:22
+  Rendered admin/users/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 132ms (Views: 121.3ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/admin/users?search_key=&search1_key=wasif%40gmail.com" for ::1 at 2022-09-09 15:43:46 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"", "search1_key"=>"wasif@gmail.com"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (LOWER(first_name) LIKE '%%' OR LOWER(last_name) LIKE '%%' )[0m
+  ↳ app/views/admin/users/index.html.erb:22
+  Rendered admin/users/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 121ms (Views: 105.8ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/admin/users?search_key=&search1_key=wasif%40gmail.com" for ::1 at 2022-09-09 15:44:02 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"", "search1_key"=>"wasif@gmail.com"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (LOWER(first_name) LIKE '%%' OR LOWER(last_name) LIKE '%%' )[0m
+  ↳ app/views/admin/users/index.html.erb:22
+  Rendered admin/users/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 124ms (Views: 114.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/admin/users?search_key=&search1_key=11" for ::1 at 2022-09-09 15:44:07 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"", "search1_key"=>"11"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (LOWER(first_name) LIKE '%%' OR LOWER(last_name) LIKE '%%' )[0m
+  ↳ app/views/admin/users/index.html.erb:22
+  Rendered admin/users/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 137ms (Views: 122.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/admin/users?search_key=&search1_key=wasif%40gmail.com" for ::1 at 2022-09-09 15:44:13 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"", "search1_key"=>"wasif@gmail.com"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (LOWER(first_name) LIKE '%%' OR LOWER(last_name) LIKE '%%' )[0m
+  ↳ app/views/admin/users/index.html.erb:22
+  Rendered admin/users/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 170ms (Views: 156.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/admin/users?search_key=&search1_key=26" for ::1 at 2022-09-09 15:44:15 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"", "search1_key"=>"26"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (LOWER(first_name) LIKE '%%' OR LOWER(last_name) LIKE '%%' )[0m
+  ↳ app/views/admin/users/index.html.erb:22
+  Rendered admin/users/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 127ms (Views: 118.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/users?search_key=&search1_key=21" for ::1 at 2022-09-09 15:44:18 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"", "search1_key"=>"21"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (LOWER(first_name) LIKE '%%' OR LOWER(last_name) LIKE '%%' )[0m
+  ↳ app/views/admin/users/index.html.erb:22
+  Rendered admin/users/index.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 211ms (Views: 194.4ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/admin/users?search_key=&search1_key=21" for ::1 at 2022-09-09 15:45:17 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"", "search1_key"=>"21"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (LOWER(first_name) LIKE '%%' OR LOWER(last_name) LIKE '%%' )[0m
+  ↳ app/views/admin/users/index.html.erb:22
+  Rendered admin/users/index.html.erb within layouts/application (95.9ms)
+Completed 200 OK in 317ms (Views: 181.7ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/admin/users?search_key=&search1_key=21" for ::1 at 2022-09-09 15:46:01 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"", "search1_key"=>"21"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (LOWER(first_name) LIKE '%%' OR LOWER(last_name) LIKE '%%' )[0m
+  ↳ app/views/admin/users/index.html.erb:22
+  Rendered admin/users/index.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 144ms (Views: 128.3ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/admin/users?search_key=&search1_key=21" for ::1 at 2022-09-09 15:52:09 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"", "search1_key"=>"21"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (LOWER(first_name) LIKE '%%' OR LOWER(email) LIKE '%%' )[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (82.1ms)
+Completed 200 OK in 236ms (Views: 156.5ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/admin/users?search_key=&search1_key=21" for ::1 at 2022-09-09 15:52:32 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"search_key"=>"", "search1_key"=>"21"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (LOWER(first_name) LIKE '%%' OR LOWER(email) LIKE '%%' )[0m
+  ↳ app/views/admin/users/index.html.erb:21
+  Rendered admin/users/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 119ms (Views: 105.9ms | ActiveRecord: 4.3ms)
+
+
