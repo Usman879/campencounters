@@ -2,7 +2,13 @@ class Admin::UsersController < ApplicationController
   before_action :find_user, only: [:show, :edit, :update, :destroy]
 
 	def index
-    @users = User.all
+    if params[:search_key]
+      @users = User.where("LOWER(first_name) LIKE ? OR LOWER(email) LIKE ? " , 
+      "%#{params[:search_key]}%", "%#{params[:search_key]}%")
+    else  
+      @users = User.all
+    end
+  
   end
 
   def new
