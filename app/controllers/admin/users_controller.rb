@@ -8,7 +8,7 @@ class Admin::UsersController < ApplicationController
     else  
       @users = User.all
     end
-  
+    
   end
 
   def new
