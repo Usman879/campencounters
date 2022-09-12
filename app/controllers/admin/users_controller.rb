@@ -1,14 +1,21 @@
 class Admin::UsersController < ApplicationController
   before_action :find_user, only: [:show, :edit, :update, :destroy]
+  helper_method :sort_column, :sort_direction
 
-	def index
+  def index
+    
     if params[:search_key]
       @users = User.where("LOWER(first_name) LIKE ? OR LOWER(email) LIKE ? " , 
-      "%#{params[:search_key]}%", "%#{params[:search_key]}%")
-    else  
-      @users = User.all.page(params[:page])
+      "%#{params[:search_key]}%", "%#{params[:search_key]}%").page(params[:page])
+    else
+      @users = User.order(sort_column + " " + sort_direction)  
+      @users = User.order(:id).page(params[:page])
+      respond_to do |format|
+        format.html
+        format.csv { send_data @users.to_csv }
+      end
     end
-
+  
   end
 
   def new
@@ -18,9 +25,10 @@ class Admin::UsersController < ApplicationController
   def create
     @user=User.new(user_params)
     if @user.save
-      redirect_to admin_users_path
+      UserMailer.welcome_email(@user).deliver_now
+      redirect_to admin_users_path , notice: "User Successfully Created."
     else
-      render 'new'
+      render 'new', notice: "Fields are missing."
     end
   end
 
@@ -34,7 +42,7 @@ class Admin::UsersController < ApplicationController
 		if @user.update(user_params)
 			redirect_to admin_user_path
 		else
-			render 'edit'
+			render 'edit' , notice: "User Successfully Updated."
 		end
 	
 	end
@@ -52,7 +60,15 @@ class Admin::UsersController < ApplicationController
   end
 
 	def user_params
-    params.require(:user).permit(:id, :first_name, :last_name, :email, :phone_number, :country, :type)
+    params.require(:user).permit(:id, :first_name, :last_name, :email, :phone_number, :password, :country, :type)
+  end
+
+  def sort_column
+    User.column_names.include?(params[:sort]) ? params[:sort] : "fname"
+  end
+  
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
   end
 
 end

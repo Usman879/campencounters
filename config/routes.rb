@@ -2,7 +2,7 @@
 
 Rails.application.routes.draw do
   root 'welcome#index'
-  get '/search', to: "users#search"
+  # get '/search', to: "users#search"
   namespace :admin do
     resources :users
   end
