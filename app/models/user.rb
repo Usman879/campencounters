@@ -1,9 +1,20 @@
 # frozen_string_literal: true
-
+require 'csv'
 class User < ApplicationRecord
   paginates_per 5
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  def self.to_csv
+    attributes = %w{ id first_name last_name email country phone_number }
+
+    CSV.generate(headers: true ) do |csv|
+      csv << attributes
+
+      all.each do |user|
+        csv << attributes.map {|attr| user.send(attr)}
+      end
+    end
+  end
   attribute :agreement, :integer
   validates :agreement, acceptance: { accept: 1 }
 
