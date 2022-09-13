@@ -30078,3 +30078,949 @@ Processing by Admin::UsersController#edit as HTML
 Completed 200 OK in 168ms (Views: 151.8ms | ActiveRecord: 1.8ms)
 
 
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6665459829308739270)[0m
+  ↳ bin/rails:11
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+Migrating to CreateActiveStorageTables (20220912131034)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:11
+  [1m[35m (25.4ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "byte_size" bigint NOT NULL, "checksum" character varying NOT NULL, "created_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20220912131034_create_active_storage_tables.active_storage.rb:4
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_blobs_on_key" ON "active_storage_blobs"  ("key")[0m
+  ↳ db/migrate/20220912131034_create_active_storage_tables.active_storage.rb:4
+  [1m[35m (19.8ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  ↳ db/migrate/20220912131034_create_active_storage_tables.active_storage.rb:16
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE  INDEX  "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments"  ("blob_id")[0m
+  ↳ db/migrate/20220912131034_create_active_storage_tables.active_storage.rb:16
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_attachments_uniqueness" ON "active_storage_attachments"  ("record_type", "record_id", "name", "blob_id")[0m
+  ↳ db/migrate/20220912131034_create_active_storage_tables.active_storage.rb:16
+  [1m[36mActiveRecord::SchemaMigration Create (1.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220912131034"]]
+  ↳ bin/rails:11
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:11
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:11
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:11
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:11
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6665459829308739270)[0m
+  ↳ bin/rails:11
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+Started GET "/admin/users" for ::1 at 2022-09-12 18:26:34 +0500
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/admin/users/index.html.erb:23
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:41
+  Rendered admin/users/index.html.erb within layouts/application (217.4ms)
+Completed 200 OK in 450ms (Views: 338.1ms | ActiveRecord: 24.0ms)
+
+
+Started GET "/admin/users/new" for ::1 at 2022-09-12 18:26:37 +0500
+Processing by Admin::UsersController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/new.html.erb within layouts/application
+  Rendered admin/users/_form.html.erb (47.1ms)
+  Rendered admin/users/new.html.erb within layouts/application (49.0ms)
+Completed 200 OK in 122ms (Views: 113.8ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/admin/users" for ::1 at 2022-09-12 18:41:16 +0500
+Processing by Admin::UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bvqye/zZ08hkEhVJ0EhgN4thCtj40uN+BUhD3TzFTdPx/wpLGfz4/iYUl57II/hl5uy5IcSVIFks4cTvhw9JHw==", "user"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00007faaecb38280 @tempfile=#<Tempfile:/tmp/RackMultipart20220912-202536-12azhs7.jpeg>, @original_filename="avatar.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"avatar.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "first_name"=>"Yasir", "last_name"=>"wahab", "phone_number"=>"03011234567", "country"=>"AF", "email"=>"rahmanyasir64@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (2.0ms) [0m[32mUploaded file to key: B4KLkRFhU9TefNTjZNhMJGu2 (checksum: lIKF6ACuKvSt6KwbWxuKTw==)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admin/users_controller.rb:26
+  [1m[36mActiveStorage::Blob Create (4.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "B4KLkRFhU9TefNTjZNhMJGu2"], ["filename", "avatar.jpeg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 39448], ["checksum", "lIKF6ACuKvSt6KwbWxuKTw=="], ["created_at", "2022-09-12 13:41:17.452920"]]
+  ↳ app/controllers/admin/users_controller.rb:26
+  [1m[35m (4.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/admin/users_controller.rb:26
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admin/users_controller.rb:26
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/admin/users_controller.rb:26
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admin/users_controller.rb:27
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rahmanyasir64@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:27
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rahmanyasir64@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:27
+  [1m[36mUser Create (1.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "confirmation_token", "confirmation_sent_at", "created_at", "updated_at", "first_name", "last_name", "country", "phone_number") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "rahmanyasir64@gmail.com"], ["encrypted_password", "$2a$12$7pkE3lK2gJyA6YDHURyZ.u/H4yHH0e/wZ9U7SSUuaig57fIjjxJGu"], ["confirmation_token", "BA-xYpGGYfDLQ-jq1v9c"], ["confirmation_sent_at", "2022-09-12 13:41:17.502963"], ["created_at", "2022-09-12 13:41:17.502651"], ["updated_at", "2022-09-12 13:41:17.502651"], ["first_name", "Yasir"], ["last_name", "wahab"], ["country", "AF"], ["phone_number", "03011234567"]]
+  ↳ app/controllers/admin/users_controller.rb:27
+  [1m[36mActiveStorage::Attachment Create (3.3ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "image"], ["record_type", "User"], ["record_id", 45], ["blob_id", 1], ["created_at", "2022-09-12 13:41:17.508452"]]
+  ↳ app/controllers/admin/users_controller.rb:27
+  [1m[36mUser Update (1.8ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1 WHERE "users"."id" = $2[0m  [["updated_at", "2022-09-12 13:41:17.514534"], ["id", 45]]
+  ↳ app/controllers/admin/users_controller.rb:27
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/admin/users_controller.rb:27
+  Rendering devise/mailer/confirmation_instructions.html.erb
+  Rendered devise/mailer/confirmation_instructions.html.erb (1.3ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 11.1ms
+Sent mail to rahmanyasir64@gmail.com (13743.9ms)
+Date: Mon, 12 Sep 2022 18:41:17 +0500
+From: usmannoor519@gmail.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: rahmanyasir64@gmail.com
+Message-ID: <631f36fd858b4_317285668101635@xombo.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome rahmanyasir64@gmail.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=BA-xYpGGYfDLQ-jq1v9c">Confirm my account</a></p>
+
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 3c575481-6bc4-4210-b99b-d3c9710149eb) to Async(default) with arguments: #<GlobalID:0x00007faaf4e8d978 @uri=#<URI::GID gid://campencounters/ActiveStorage::Blob/1>>
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (3.5ms)
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (1.0ms)
+UserMailer#welcome_email: processed outbound mail in 25.8ms
+Sent mail to rahmanyasir64@gmail.com (12214.8ms)
+Date: Mon, 12 Sep 2022 18:41:31 +0500
+From: usmannoor519@gmail.com
+To: rahmanyasir64@gmail.com
+Message-ID: <631f370b56b8e_3172856681018bb@xombo.mail>
+Subject: Welcome to Camp Encounters
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_631f370b558db_317285668101764";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_631f370b558db_317285668101764
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Welcome to Camp Encounter Yasir
+===============================================
+You have successfully signed up to Camp Encounter
+your username is: rahmanyasir64@gmail.com.
+<a href="http://localhost:3000/users/password/new">Accept Invitation</a>
+Thanks for joining and have a great day!
+
+----==_mimepart_631f370b558db_317285668101764
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Welcome to Camp Encounters Yasir</h1>
+  <p>
+    You have successfully signed up to Camp Encounter
+    your username is: rahmanyasir64@gmail.com.<br>
+  </p>
+  <a href="http://localhost:3000/users/password/new">Accept Invitation</a>
+<p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+
+----==_mimepart_631f370b558db_317285668101764--
+
+Redirected to http://localhost:3000/admin/users
+Completed 302 Found in 26603ms (ActiveRecord: 48.2ms)
+
+
+Started GET "/admin/users" for ::1 at 2022-09-12 18:41:43 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (6.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/admin/users/index.html.erb:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:41
+  [1m[36mActiveStorage::Blob Load (2.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3c575481-6bc4-4210-b99b-d3c9710149eb] Performing ActiveStorage::AnalyzeJob (Job ID: 3c575481-6bc4-4210-b99b-d3c9710149eb) from Async(default) with arguments: #<GlobalID:0x00007faaec699238 @uri=#<URI::GID gid://campencounters/ActiveStorage::Blob/1>>
+  Rendered admin/users/index.html.erb within layouts/application (145.3ms)
+Completed 200 OK in 305ms (Views: 226.0ms | ActiveRecord: 15.2ms)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3c575481-6bc4-4210-b99b-d3c9710149eb] [36m  Disk Storage (0.4ms) [0m[34mDownloaded file from key: B4KLkRFhU9TefNTjZNhMJGu2[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3c575481-6bc4-4210-b99b-d3c9710149eb] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3c575481-6bc4-4210-b99b-d3c9710149eb]   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3c575481-6bc4-4210-b99b-d3c9710149eb]   ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3c575481-6bc4-4210-b99b-d3c9710149eb]   [1m[36mActiveStorage::Blob Update (1.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3c575481-6bc4-4210-b99b-d3c9710149eb]   ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3c575481-6bc4-4210-b99b-d3c9710149eb]   [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3c575481-6bc4-4210-b99b-d3c9710149eb]   ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3c575481-6bc4-4210-b99b-d3c9710149eb] Performed ActiveStorage::AnalyzeJob (Job ID: 3c575481-6bc4-4210-b99b-d3c9710149eb) from Async(default) in 116.25ms
+Started GET "/admin/users?page=2" for ::1 at 2022-09-12 18:41:50 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  ↳ app/views/admin/users/index.html.erb:23
+  Rendered admin/users/index.html.erb within layouts/application (50.6ms)
+Completed 200 OK in 186ms (Views: 166.6ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/admin/users/45" for ::1 at 2022-09-12 18:41:57 +0500
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:59
+  Rendering admin/users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 45], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/admin/users/show.html.erb:1
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/users/show.html.erb:1
+  Rendered admin/users/show.html.erb within layouts/application (54.6ms)
+Completed 200 OK in 145ms (Views: 127.4ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--56eabc4518344556bdae6ebd072d4648d6898bf3/avatar.jpeg" for ::1 at 2022-09-12 18:41:57 +0500
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--56eabc4518344556bdae6ebd072d4648d6898bf3", "filename"=>"avatar"}
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (2.3ms) [0m[34mGenerated URL for file at key: B4KLkRFhU9TefNTjZNhMJGu2 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRalJMVEd0U1JtaFZPVlJsWms1VWFscE9hRTFLUjNVeUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZWFpoZEdGeUxtcHdaV2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJGMllYUmhjaTVxY0dWbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDktMTJUMTM6NDY6NTcuNjY0WiIsInB1ciI6ImJsb2Jfa2V5In19--accbd529637b91dbadea6fdcbef820b3ab92e3f7/avatar.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22avatar.jpeg%22%3B+filename%2A%3DUTF-8%27%27avatar.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRalJMVEd0U1JtaFZPVlJsWms1VWFscE9hRTFLUjNVeUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZWFpoZEdGeUxtcHdaV2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJGMllYUmhjaTVxY0dWbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDktMTJUMTM6NDY6NTcuNjY0WiIsInB1ciI6ImJsb2Jfa2V5In19--accbd529637b91dbadea6fdcbef820b3ab92e3f7/avatar.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22avatar.jpeg%22%3B+filename%2A%3DUTF-8%27%27avatar.jpeg
+Completed 302 Found in 14ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRalJMVEd0U1JtaFZPVlJsWms1VWFscE9hRTFLUjNVeUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZWFpoZEdGeUxtcHdaV2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJGMllYUmhjaTVxY0dWbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDktMTJUMTM6NDY6NTcuNjY0WiIsInB1ciI6ImJsb2Jfa2V5In19--accbd529637b91dbadea6fdcbef820b3ab92e3f7/avatar.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22avatar.jpeg%22%3B+filename%2A%3DUTF-8%27%27avatar.jpeg" for ::1 at 2022-09-12 18:41:57 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"avatar.jpeg\"; filename*=UTF-8''avatar.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRalJMVEd0U1JtaFZPVlJsWms1VWFscE9hRTFLUjNVeUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZWFpoZEdGeUxtcHdaV2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJGMllYUmhjaTVxY0dWbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDktMTJUMTM6NDY6NTcuNjY0WiIsInB1ciI6ImJsb2Jfa2V5In19--accbd529637b91dbadea6fdcbef820b3ab92e3f7", "filename"=>"avatar"}
+Completed 200 OK in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users/45/edit" for ::1 at 2022-09-12 18:42:32 +0500
+Processing by Admin::UsersController#edit as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:59
+  Rendering admin/users/edit.html.erb within layouts/application
+  Rendered admin/users/_form.html.erb (80.8ms)
+  Rendered admin/users/edit.html.erb within layouts/application (85.9ms)
+Completed 200 OK in 176ms (Views: 159.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/admin/users/new" for ::1 at 2022-09-12 18:51:28 +0500
+Processing by Admin::UsersController#new as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/new.html.erb within layouts/application
+  Rendered admin/users/_form.html.erb (99.0ms)
+  Rendered admin/users/new.html.erb within layouts/application (102.6ms)
+Completed 200 OK in 225ms (Views: 208.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/admin/users/new" for ::1 at 2022-09-12 18:52:14 +0500
+Processing by Admin::UsersController#new as HTML
+  [1m[36mUser Load (14.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/new.html.erb within layouts/application
+  Rendered admin/users/_form.html.erb (83.8ms)
+  Rendered admin/users/new.html.erb within layouts/application (90.3ms)
+Completed 200 OK in 276ms (Views: 251.4ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/admin/users" for ::1 at 2022-09-12 19:04:24 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/admin/users/index.html.erb:23
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:41
+  Rendered admin/users/index.html.erb within layouts/application (37.9ms)
+Completed 200 OK in 147ms (Views: 119.9ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/admin/users?page=2" for ::1 at 2022-09-12 19:04:31 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  ↳ app/views/admin/users/index.html.erb:23
+  Rendered admin/users/index.html.erb within layouts/application (54.3ms)
+Completed 200 OK in 209ms (Views: 192.6ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/admin/users/45" for ::1 at 2022-09-12 19:04:34 +0500
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:59
+  Rendering admin/users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 45], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/admin/users/show.html.erb:1
+  [1m[36mActiveStorage::Blob Load (1.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/users/show.html.erb:1
+  Rendered admin/users/show.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 109ms (Views: 94.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--56eabc4518344556bdae6ebd072d4648d6898bf3/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9TY21WemFYcGxYM1J2WDJacGRGc0hhUUwwQVdrQzlBRT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--3e81920fa2a47bec64ac01573e4ee0f59e9cf01b/avatar.jpeg" for ::1 at 2022-09-12 19:04:34 +0500
+Processing by ActiveStorage::RepresentationsController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--56eabc4518344556bdae6ebd072d4648d6898bf3", "variation_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9TY21WemFYcGxYM1J2WDJacGRGc0hhUUwwQVdrQzlBRT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--3e81920fa2a47bec64ac01573e4ee0f59e9cf01b", "filename"=>"avatar"}
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.1ms) [0m[34mChecked if file exists at key: variants/B4KLkRFhU9TefNTjZNhMJGu2/6999e968cc4f66c69535849c0d541dec202eac5b8b0e39c2b4d218ff2aa595eb (no)[0m
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.5ms)
+
+
+  
+LoadError (cannot load such file -- mini_magick):
+  
+bootsnap (1.13.0) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:17:in `require'
+bootsnap (1.13.0) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:17:in `require'
+activesupport (5.2.8.1) lib/active_support/dependencies.rb:291:in `block in require'
+activesupport (5.2.8.1) lib/active_support/dependencies.rb:257:in `load_dependency'
+activesupport (5.2.8.1) lib/active_support/dependencies.rb:291:in `require'
+activestorage (5.2.8.1) app/models/active_storage/variant.rb:117:in `download_image'
+activestorage (5.2.8.1) app/models/active_storage/variant.rb:107:in `open_image'
+activestorage (5.2.8.1) app/models/active_storage/variant.rb:85:in `process'
+activestorage (5.2.8.1) app/models/active_storage/variant.rb:53:in `processed'
+activestorage (5.2.8.1) app/controllers/active_storage/representations_controller.rb:12:in `show'
+actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.8.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.8.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.8.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.8.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.8.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.8.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.8.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.8.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/users/45" for ::1 at 2022-09-12 19:06:21 +0500
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:59
+  Rendering admin/users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (3.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 45], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/admin/users/show.html.erb:1
+  [1m[36mActiveStorage::Blob Load (1.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/users/show.html.erb:1
+  Rendered admin/users/show.html.erb within layouts/application (34.1ms)
+Completed 200 OK in 150ms (Views: 132.8ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--56eabc4518344556bdae6ebd072d4648d6898bf3/avatar.jpeg" for ::1 at 2022-09-12 19:06:21 +0500
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--56eabc4518344556bdae6ebd072d4648d6898bf3", "filename"=>"avatar"}
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (2.8ms) [0m[34mGenerated URL for file at key: B4KLkRFhU9TefNTjZNhMJGu2 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRalJMVEd0U1JtaFZPVlJsWms1VWFscE9hRTFLUjNVeUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZWFpoZEdGeUxtcHdaV2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJGMllYUmhjaTVxY0dWbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDktMTJUMTQ6MTE6MjEuNTQxWiIsInB1ciI6ImJsb2Jfa2V5In19--fd28520c2239404d7f0b323593e5461edcbfdf16/avatar.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22avatar.jpeg%22%3B+filename%2A%3DUTF-8%27%27avatar.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRalJMVEd0U1JtaFZPVlJsWms1VWFscE9hRTFLUjNVeUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZWFpoZEdGeUxtcHdaV2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJGMllYUmhjaTVxY0dWbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDktMTJUMTQ6MTE6MjEuNTQxWiIsInB1ciI6ImJsb2Jfa2V5In19--fd28520c2239404d7f0b323593e5461edcbfdf16/avatar.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22avatar.jpeg%22%3B+filename%2A%3DUTF-8%27%27avatar.jpeg
+Completed 302 Found in 10ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRalJMVEd0U1JtaFZPVlJsWms1VWFscE9hRTFLUjNVeUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZWFpoZEdGeUxtcHdaV2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJGMllYUmhjaTVxY0dWbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDktMTJUMTQ6MTE6MjEuNTQxWiIsInB1ciI6ImJsb2Jfa2V5In19--fd28520c2239404d7f0b323593e5461edcbfdf16/avatar.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22avatar.jpeg%22%3B+filename%2A%3DUTF-8%27%27avatar.jpeg" for ::1 at 2022-09-12 19:06:21 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"avatar.jpeg\"; filename*=UTF-8''avatar.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRalJMVEd0U1JtaFZPVlJsWms1VWFscE9hRTFLUjNVeUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZWFpoZEdGeUxtcHdaV2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJGMllYUmhjaTVxY0dWbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDktMTJUMTQ6MTE6MjEuNTQxWiIsInB1ciI6ImJsb2Jfa2V5In19--fd28520c2239404d7f0b323593e5461edcbfdf16", "filename"=>"avatar"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users/45" for ::1 at 2022-09-13 10:18:53 +0500
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:59
+  Rendering admin/users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 45], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/admin/users/show.html.erb:1
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/users/show.html.erb:1
+  Rendered admin/users/show.html.erb within layouts/application (93.2ms)
+Completed 200 OK in 991ms (Views: 855.4ms | ActiveRecord: 31.0ms)
+
+
+Started GET "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--56eabc4518344556bdae6ebd072d4648d6898bf3/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTXpBd0tqTXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--9d11c526d47631a0a2f5a1d716c98220f038c72e/avatar.jpeg" for ::1 at 2022-09-13 10:18:54 +0500
+Processing by ActiveStorage::RepresentationsController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--56eabc4518344556bdae6ebd072d4648d6898bf3", "variation_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTXpBd0tqTXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--9d11c526d47631a0a2f5a1d716c98220f038c72e", "filename"=>"avatar"}
+  [1m[36mActiveStorage::Blob Load (1.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.1ms) [0m[34mChecked if file exists at key: variants/B4KLkRFhU9TefNTjZNhMJGu2/2955766d9edcc3ae2b959db02dd49af95a14d9a3caa9f88997ad7169bb45250a (no)[0m
+[36m  Disk Storage (0.6ms) [0m[34mDownloaded file from key: B4KLkRFhU9TefNTjZNhMJGu2[0m
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.4ms)
+
+
+  
+MiniMagick::Invalid (You must have ImageMagick or GraphicsMagick installed):
+  
+mini_magick (4.11.0) lib/mini_magick/image.rb:221:in `rescue in validate!'
+mini_magick (4.11.0) lib/mini_magick/image.rb:218:in `validate!'
+mini_magick (4.11.0) lib/mini_magick/image.rb:131:in `block in create'
+mini_magick (4.11.0) lib/mini_magick/image.rb:130:in `tap'
+mini_magick (4.11.0) lib/mini_magick/image.rb:130:in `create'
+activestorage (5.2.8.1) app/models/active_storage/variant.rb:118:in `download_image'
+activestorage (5.2.8.1) app/models/active_storage/variant.rb:107:in `open_image'
+activestorage (5.2.8.1) app/models/active_storage/variant.rb:85:in `process'
+activestorage (5.2.8.1) app/models/active_storage/variant.rb:53:in `processed'
+activestorage (5.2.8.1) app/controllers/active_storage/representations_controller.rb:12:in `show'
+actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.8.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.8.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.8.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.8.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.8.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.8.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.8.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.8.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/users/45" for ::1 at 2022-09-13 10:22:07 +0500
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:59
+  Rendering admin/users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 45], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/admin/users/show.html.erb:1
+  [1m[36mActiveStorage::Blob Load (1.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/users/show.html.erb:1
+  Rendered admin/users/show.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 169ms (Views: 144.2ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--56eabc4518344556bdae6ebd072d4648d6898bf3/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTXpBd0tqTXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--9d11c526d47631a0a2f5a1d716c98220f038c72e/avatar.jpeg" for ::1 at 2022-09-13 10:22:07 +0500
+Processing by ActiveStorage::RepresentationsController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--56eabc4518344556bdae6ebd072d4648d6898bf3", "variation_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTXpBd0tqTXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--9d11c526d47631a0a2f5a1d716c98220f038c72e", "filename"=>"avatar"}
+  [1m[36mActiveStorage::Blob Load (1.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.2ms) [0m[34mChecked if file exists at key: variants/B4KLkRFhU9TefNTjZNhMJGu2/2955766d9edcc3ae2b959db02dd49af95a14d9a3caa9f88997ad7169bb45250a (no)[0m
+[36m  Disk Storage (1.1ms) [0m[34mDownloaded file from key: B4KLkRFhU9TefNTjZNhMJGu2[0m
+Completed 500 Internal Server Error in 129ms (ActiveRecord: 1.6ms)
+
+
+  
+MiniMagick::Error (`mogrify -resize 300*300 /tmp/mini_magick20220913-214373-1l31rwb.jpeg` failed with error:
+mogrify-im6.q16: invalid argument for option `300*300': -resize @ error/mogrify.c/MogrifyImageCommand/5859.
+):
+  
+mini_magick (4.11.0) lib/mini_magick/shell.rb:17:in `run'
+mini_magick (4.11.0) lib/mini_magick/tool.rb:92:in `call'
+mini_magick (4.11.0) lib/mini_magick/tool.rb:38:in `new'
+mini_magick (4.11.0) lib/mini_magick/image.rb:594:in `mogrify'
+activestorage (5.2.8.1) app/models/active_storage/variation.rb:63:in `block (2 levels) in transform'
+activestorage (5.2.8.1) app/models/active_storage/variation.rb:61:in `each'
+activestorage (5.2.8.1) app/models/active_storage/variation.rb:61:in `block in transform'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:170:in `instrument'
+activestorage (5.2.8.1) app/models/active_storage/variation.rb:60:in `transform'
+activestorage (5.2.8.1) app/models/active_storage/variant.rb:122:in `transform'
+activestorage (5.2.8.1) app/models/active_storage/variant.rb:86:in `block in process'
+activestorage (5.2.8.1) app/models/active_storage/variant.rb:110:in `open_image'
+activestorage (5.2.8.1) app/models/active_storage/variant.rb:85:in `process'
+activestorage (5.2.8.1) app/models/active_storage/variant.rb:53:in `processed'
+activestorage (5.2.8.1) app/controllers/active_storage/representations_controller.rb:12:in `show'
+actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.8.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.8.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.8.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.8.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.8.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.8.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.8.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.8.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/users/45" for ::1 at 2022-09-13 10:23:12 +0500
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:59
+  Rendering admin/users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (2.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 45], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/admin/users/show.html.erb:1
+  [1m[36mActiveStorage::Blob Load (2.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/users/show.html.erb:1
+  Rendered admin/users/show.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 209ms (Views: 192.3ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--56eabc4518344556bdae6ebd072d4648d6898bf3/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTXpBd0tqTXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--9d11c526d47631a0a2f5a1d716c98220f038c72e/avatar.jpeg" for ::1 at 2022-09-13 10:23:13 +0500
+Processing by ActiveStorage::RepresentationsController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--56eabc4518344556bdae6ebd072d4648d6898bf3", "variation_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTXpBd0tqTXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--9d11c526d47631a0a2f5a1d716c98220f038c72e", "filename"=>"avatar"}
+  [1m[36mActiveStorage::Blob Load (1.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.2ms) [0m[34mChecked if file exists at key: variants/B4KLkRFhU9TefNTjZNhMJGu2/2955766d9edcc3ae2b959db02dd49af95a14d9a3caa9f88997ad7169bb45250a (no)[0m
+[36m  Disk Storage (1.6ms) [0m[34mDownloaded file from key: B4KLkRFhU9TefNTjZNhMJGu2[0m
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 1.6ms)
+
+
+  
+MiniMagick::Error (`mogrify -resize 300*300 /tmp/mini_magick20220913-214373-1kkah13.jpeg` failed with error:
+mogrify-im6.q16: invalid argument for option `300*300': -resize @ error/mogrify.c/MogrifyImageCommand/5859.
+):
+  
+mini_magick (4.11.0) lib/mini_magick/shell.rb:17:in `run'
+mini_magick (4.11.0) lib/mini_magick/tool.rb:92:in `call'
+mini_magick (4.11.0) lib/mini_magick/tool.rb:38:in `new'
+mini_magick (4.11.0) lib/mini_magick/image.rb:594:in `mogrify'
+activestorage (5.2.8.1) app/models/active_storage/variation.rb:63:in `block (2 levels) in transform'
+activestorage (5.2.8.1) app/models/active_storage/variation.rb:61:in `each'
+activestorage (5.2.8.1) app/models/active_storage/variation.rb:61:in `block in transform'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:170:in `instrument'
+activestorage (5.2.8.1) app/models/active_storage/variation.rb:60:in `transform'
+activestorage (5.2.8.1) app/models/active_storage/variant.rb:122:in `transform'
+activestorage (5.2.8.1) app/models/active_storage/variant.rb:86:in `block in process'
+activestorage (5.2.8.1) app/models/active_storage/variant.rb:110:in `open_image'
+activestorage (5.2.8.1) app/models/active_storage/variant.rb:85:in `process'
+activestorage (5.2.8.1) app/models/active_storage/variant.rb:53:in `processed'
+activestorage (5.2.8.1) app/controllers/active_storage/representations_controller.rb:12:in `show'
+actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.8.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.8.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.8.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.8.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.8.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.8.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.8.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.8.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.8.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/users/45" for ::1 at 2022-09-13 10:24:04 +0500
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:59
+  Rendering admin/users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 45], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/admin/users/show.html.erb:1
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/users/show.html.erb:1
+  Rendered admin/users/show.html.erb within layouts/application (81.1ms)
+Completed 200 OK in 253ms (Views: 174.3ms | ActiveRecord: 25.6ms)
+
+
+Started GET "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--56eabc4518344556bdae6ebd072d4648d6898bf3/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTXpBd2VETXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--364d38697c7ad66f34d92e21c714c5be37a9fd2b/avatar.jpeg" for ::1 at 2022-09-13 10:24:05 +0500
+Processing by ActiveStorage::RepresentationsController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--56eabc4518344556bdae6ebd072d4648d6898bf3", "variation_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTXpBd2VETXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--364d38697c7ad66f34d92e21c714c5be37a9fd2b", "filename"=>"avatar"}
+  [1m[36mActiveStorage::Blob Load (1.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.1ms) [0m[34mChecked if file exists at key: variants/B4KLkRFhU9TefNTjZNhMJGu2/97ede18fa8feb9ea0a9f4fc704d73bd257ab4ad56005cbd0be30efa5856fef35 (no)[0m
+[36m  Disk Storage (0.5ms) [0m[34mDownloaded file from key: B4KLkRFhU9TefNTjZNhMJGu2[0m
+[36m  Disk Storage (1.6ms) [0m[32mUploaded file to key: variants/B4KLkRFhU9TefNTjZNhMJGu2/97ede18fa8feb9ea0a9f4fc704d73bd257ab4ad56005cbd0be30efa5856fef35[0m
+[36m  Disk Storage (13.9ms) [0m[34mGenerated URL for file at key: variants/B4KLkRFhU9TefNTjZNhMJGu2/97ede18fa8feb9ea0a9f4fc704d73bd257ab4ad56005cbd0be30efa5856fef35 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZRalJMVEd0U1JtaFZPVlJsWms1VWFscE9hRTFLUjNVeUx6azNaV1JsTVRobVlUaG1aV0k1WldFd1lUbG1OR1pqTnpBMFpEY3pZbVF5TlRkaFlqUmhaRFUyTURBMVkySmtNR0psTXpCbFptRTFPRFUyWm1WbU16VUdPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJa0ZwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0poZG1GMFlYSXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbllYWmhkR0Z5TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDA1OjI5OjA1LjUzN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--adcc46c46925b0a46d40198e66f1235c6293a187/avatar.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22avatar.jpeg%22%3B+filename%2A%3DUTF-8%27%27avatar.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZRalJMVEd0U1JtaFZPVlJsWms1VWFscE9hRTFLUjNVeUx6azNaV1JsTVRobVlUaG1aV0k1WldFd1lUbG1OR1pqTnpBMFpEY3pZbVF5TlRkaFlqUmhaRFUyTURBMVkySmtNR0psTXpCbFptRTFPRFUyWm1WbU16VUdPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJa0ZwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0poZG1GMFlYSXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbllYWmhkR0Z5TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDA1OjI5OjA1LjUzN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--adcc46c46925b0a46d40198e66f1235c6293a187/avatar.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22avatar.jpeg%22%3B+filename%2A%3DUTF-8%27%27avatar.jpeg
+Completed 302 Found in 262ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZRalJMVEd0U1JtaFZPVlJsWms1VWFscE9hRTFLUjNVeUx6azNaV1JsTVRobVlUaG1aV0k1WldFd1lUbG1OR1pqTnpBMFpEY3pZbVF5TlRkaFlqUmhaRFUyTURBMVkySmtNR0psTXpCbFptRTFPRFUyWm1WbU16VUdPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJa0ZwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0poZG1GMFlYSXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbllYWmhkR0Z5TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDA1OjI5OjA1LjUzN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--adcc46c46925b0a46d40198e66f1235c6293a187/avatar.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22avatar.jpeg%22%3B+filename%2A%3DUTF-8%27%27avatar.jpeg" for ::1 at 2022-09-13 10:24:05 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"avatar.jpeg\"; filename*=UTF-8''avatar.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZRalJMVEd0U1JtaFZPVlJsWms1VWFscE9hRTFLUjNVeUx6azNaV1JsTVRobVlUaG1aV0k1WldFd1lUbG1OR1pqTnpBMFpEY3pZbVF5TlRkaFlqUmhaRFUyTURBMVkySmtNR0psTXpCbFptRTFPRFUyWm1WbU16VUdPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJa0ZwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0poZG1GMFlYSXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbllYWmhkR0Z5TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDA1OjI5OjA1LjUzN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--adcc46c46925b0a46d40198e66f1235c6293a187", "filename"=>"avatar"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users/45/edit" for ::1 at 2022-09-13 10:24:37 +0500
+Processing by Admin::UsersController#edit as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:59
+  Rendering admin/users/edit.html.erb within layouts/application
+  Rendered admin/users/_form.html.erb (71.1ms)
+  Rendered admin/users/edit.html.erb within layouts/application (73.3ms)
+Completed 200 OK in 156ms (Views: 142.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/admin/users/45" for ::1 at 2022-09-13 10:25:59 +0500
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:59
+  Rendering admin/users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 45], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/admin/users/show.html.erb:1
+  [1m[36mActiveStorage::Blob Load (1.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/users/show.html.erb:1
+  Rendered admin/users/show.html.erb within layouts/application (62.8ms)
+Completed 200 OK in 193ms (Views: 125.8ms | ActiveRecord: 20.1ms)
+
+
+Started GET "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--56eabc4518344556bdae6ebd072d4648d6898bf3/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTXpBd2VERXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--2b4dfe7ef9c274c2b77082d0e337827ab7148a20/avatar.jpeg" for ::1 at 2022-09-13 10:25:59 +0500
+Processing by ActiveStorage::RepresentationsController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--56eabc4518344556bdae6ebd072d4648d6898bf3", "variation_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTXpBd2VERXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--2b4dfe7ef9c274c2b77082d0e337827ab7148a20", "filename"=>"avatar"}
+  [1m[36mActiveStorage::Blob Load (1.9ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.1ms) [0m[34mChecked if file exists at key: variants/B4KLkRFhU9TefNTjZNhMJGu2/d5abf1ec227a5c9d53848b80522218977b969578437531ba1c084b4d2042d421 (no)[0m
+[36m  Disk Storage (0.4ms) [0m[34mDownloaded file from key: B4KLkRFhU9TefNTjZNhMJGu2[0m
+[36m  Disk Storage (0.7ms) [0m[32mUploaded file to key: variants/B4KLkRFhU9TefNTjZNhMJGu2/d5abf1ec227a5c9d53848b80522218977b969578437531ba1c084b4d2042d421[0m
+[36m  Disk Storage (2.3ms) [0m[34mGenerated URL for file at key: variants/B4KLkRFhU9TefNTjZNhMJGu2/d5abf1ec227a5c9d53848b80522218977b969578437531ba1c084b4d2042d421 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZRalJMVEd0U1JtaFZPVlJsWms1VWFscE9hRTFLUjNVeUwyUTFZV0ptTVdWak1qSTNZVFZqT1dRMU16ZzBPR0k0TURVeU1qSXhPRGszTjJJNU5qazFOemcwTXpjMU16RmlZVEZqTURnMFlqUmtNakEwTW1RME1qRUdPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJa0ZwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0poZG1GMFlYSXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbllYWmhkR0Z5TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDA1OjMwOjU5LjY4N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f1eb672527e394e88f9acc55e28f4f7b815b48a0/avatar.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22avatar.jpeg%22%3B+filename%2A%3DUTF-8%27%27avatar.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZRalJMVEd0U1JtaFZPVlJsWms1VWFscE9hRTFLUjNVeUwyUTFZV0ptTVdWak1qSTNZVFZqT1dRMU16ZzBPR0k0TURVeU1qSXhPRGszTjJJNU5qazFOemcwTXpjMU16RmlZVEZqTURnMFlqUmtNakEwTW1RME1qRUdPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJa0ZwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0poZG1GMFlYSXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbllYWmhkR0Z5TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDA1OjMwOjU5LjY4N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f1eb672527e394e88f9acc55e28f4f7b815b48a0/avatar.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22avatar.jpeg%22%3B+filename%2A%3DUTF-8%27%27avatar.jpeg
+Completed 302 Found in 275ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZRalJMVEd0U1JtaFZPVlJsWms1VWFscE9hRTFLUjNVeUwyUTFZV0ptTVdWak1qSTNZVFZqT1dRMU16ZzBPR0k0TURVeU1qSXhPRGszTjJJNU5qazFOemcwTXpjMU16RmlZVEZqTURnMFlqUmtNakEwTW1RME1qRUdPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJa0ZwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0poZG1GMFlYSXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbllYWmhkR0Z5TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDA1OjMwOjU5LjY4N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f1eb672527e394e88f9acc55e28f4f7b815b48a0/avatar.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22avatar.jpeg%22%3B+filename%2A%3DUTF-8%27%27avatar.jpeg" for ::1 at 2022-09-13 10:25:59 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"avatar.jpeg\"; filename*=UTF-8''avatar.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZRalJMVEd0U1JtaFZPVlJsWms1VWFscE9hRTFLUjNVeUwyUTFZV0ptTVdWak1qSTNZVFZqT1dRMU16ZzBPR0k0TURVeU1qSXhPRGszTjJJNU5qazFOemcwTXpjMU16RmlZVEZqTURnMFlqUmtNakEwTW1RME1qRUdPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJa0ZwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0poZG1GMFlYSXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbllYWmhkR0Z5TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDA1OjMwOjU5LjY4N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f1eb672527e394e88f9acc55e28f4f7b815b48a0", "filename"=>"avatar"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users/45" for ::1 at 2022-09-13 10:26:15 +0500
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:59
+  Rendering admin/users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 45], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/admin/users/show.html.erb:1
+  [1m[36mActiveStorage::Blob Load (1.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/users/show.html.erb:1
+  Rendered admin/users/show.html.erb within layouts/application (86.2ms)
+Completed 200 OK in 228ms (Views: 148.8ms | ActiveRecord: 26.5ms)
+
+
+Started GET "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--56eabc4518344556bdae6ebd072d4648d6898bf3/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTXpBd2VESXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--245b603b3cda01a337aa66ff655740eee7aa9cd3/avatar.jpeg" for ::1 at 2022-09-13 10:26:16 +0500
+Processing by ActiveStorage::RepresentationsController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--56eabc4518344556bdae6ebd072d4648d6898bf3", "variation_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTXpBd2VESXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--245b603b3cda01a337aa66ff655740eee7aa9cd3", "filename"=>"avatar"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.1ms) [0m[34mChecked if file exists at key: variants/B4KLkRFhU9TefNTjZNhMJGu2/fee9542e00442ec82aad55d2363da78cd71fe170f4470985e81e3fca0070b4d2 (no)[0m
+[36m  Disk Storage (0.3ms) [0m[34mDownloaded file from key: B4KLkRFhU9TefNTjZNhMJGu2[0m
+[36m  Disk Storage (0.6ms) [0m[32mUploaded file to key: variants/B4KLkRFhU9TefNTjZNhMJGu2/fee9542e00442ec82aad55d2363da78cd71fe170f4470985e81e3fca0070b4d2[0m
+[36m  Disk Storage (1.3ms) [0m[34mGenerated URL for file at key: variants/B4KLkRFhU9TefNTjZNhMJGu2/fee9542e00442ec82aad55d2363da78cd71fe170f4470985e81e3fca0070b4d2 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZRalJMVEd0U1JtaFZPVlJsWms1VWFscE9hRTFLUjNVeUwyWmxaVGsxTkRKbE1EQTBOREpsWXpneVlXRmtOVFZrTWpNMk0yUmhOemhqWkRjeFptVXhOekJtTkRRM01EazROV1U0TVdVelptTmhNREEzTUdJMFpESUdPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJa0ZwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0poZG1GMFlYSXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbllYWmhkR0Z5TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDA1OjMxOjE2LjQ3MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--1aa32428b0e4be00fe30999a06fe0f51aa8139e3/avatar.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22avatar.jpeg%22%3B+filename%2A%3DUTF-8%27%27avatar.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZRalJMVEd0U1JtaFZPVlJsWms1VWFscE9hRTFLUjNVeUwyWmxaVGsxTkRKbE1EQTBOREpsWXpneVlXRmtOVFZrTWpNMk0yUmhOemhqWkRjeFptVXhOekJtTkRRM01EazROV1U0TVdVelptTmhNREEzTUdJMFpESUdPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJa0ZwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0poZG1GMFlYSXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbllYWmhkR0Z5TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDA1OjMxOjE2LjQ3MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--1aa32428b0e4be00fe30999a06fe0f51aa8139e3/avatar.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22avatar.jpeg%22%3B+filename%2A%3DUTF-8%27%27avatar.jpeg
+Completed 302 Found in 184ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZRalJMVEd0U1JtaFZPVlJsWms1VWFscE9hRTFLUjNVeUwyWmxaVGsxTkRKbE1EQTBOREpsWXpneVlXRmtOVFZrTWpNMk0yUmhOemhqWkRjeFptVXhOekJtTkRRM01EazROV1U0TVdVelptTmhNREEzTUdJMFpESUdPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJa0ZwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0poZG1GMFlYSXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbllYWmhkR0Z5TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDA1OjMxOjE2LjQ3MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--1aa32428b0e4be00fe30999a06fe0f51aa8139e3/avatar.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22avatar.jpeg%22%3B+filename%2A%3DUTF-8%27%27avatar.jpeg" for ::1 at 2022-09-13 10:26:16 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"avatar.jpeg\"; filename*=UTF-8''avatar.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZRalJMVEd0U1JtaFZPVlJsWms1VWFscE9hRTFLUjNVeUwyWmxaVGsxTkRKbE1EQTBOREpsWXpneVlXRmtOVFZrTWpNMk0yUmhOemhqWkRjeFptVXhOekJtTkRRM01EazROV1U0TVdVelptTmhNREEzTUdJMFpESUdPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJa0ZwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0poZG1GMFlYSXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbllYWmhkR0Z5TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDA1OjMxOjE2LjQ3MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--1aa32428b0e4be00fe30999a06fe0f51aa8139e3", "filename"=>"avatar"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users/45" for ::1 at 2022-09-13 10:27:53 +0500
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:59
+  Rendering admin/users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 45], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/admin/users/show.html.erb:1
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/users/show.html.erb:1
+  Rendered admin/users/show.html.erb within layouts/application (60.6ms)
+Completed 200 OK in 203ms (Views: 131.9ms | ActiveRecord: 18.7ms)
+
+
+Started GET "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--56eabc4518344556bdae6ebd072d4648d6898bf3/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lOTXpBd2VESXdNQ0VHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--f1427eab8b8f2210a1f1729d1329ac20af93adf2/avatar.jpeg" for ::1 at 2022-09-13 10:27:53 +0500
+Processing by ActiveStorage::RepresentationsController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--56eabc4518344556bdae6ebd072d4648d6898bf3", "variation_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lOTXpBd2VESXdNQ0VHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--f1427eab8b8f2210a1f1729d1329ac20af93adf2", "filename"=>"avatar"}
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.1ms) [0m[34mChecked if file exists at key: variants/B4KLkRFhU9TefNTjZNhMJGu2/779d147a71bc92ed98cc631f28811de408f8851a02810c82c0e8ad5523b74f5e (no)[0m
+[36m  Disk Storage (1.4ms) [0m[34mDownloaded file from key: B4KLkRFhU9TefNTjZNhMJGu2[0m
+[36m  Disk Storage (0.9ms) [0m[32mUploaded file to key: variants/B4KLkRFhU9TefNTjZNhMJGu2/779d147a71bc92ed98cc631f28811de408f8851a02810c82c0e8ad5523b74f5e[0m
+[36m  Disk Storage (3.6ms) [0m[34mGenerated URL for file at key: variants/B4KLkRFhU9TefNTjZNhMJGu2/779d147a71bc92ed98cc631f28811de408f8851a02810c82c0e8ad5523b74f5e (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZRalJMVEd0U1JtaFZPVlJsWms1VWFscE9hRTFLUjNVeUx6YzNPV1F4TkRkaE56RmlZemt5WldRNU9HTmpOak14WmpJNE9ERXhaR1UwTURobU9EZzFNV0V3TWpneE1HTTRNbU13WlRoaFpEVTFNak5pTnpSbU5XVUdPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJa0ZwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0poZG1GMFlYSXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbllYWmhkR0Z5TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDA1OjMyOjU0LjA3MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a1fdf3f2d8e840ef052c3504881e762bdf3c7808/avatar.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22avatar.jpeg%22%3B+filename%2A%3DUTF-8%27%27avatar.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZRalJMVEd0U1JtaFZPVlJsWms1VWFscE9hRTFLUjNVeUx6YzNPV1F4TkRkaE56RmlZemt5WldRNU9HTmpOak14WmpJNE9ERXhaR1UwTURobU9EZzFNV0V3TWpneE1HTTRNbU13WlRoaFpEVTFNak5pTnpSbU5XVUdPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJa0ZwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0poZG1GMFlYSXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbllYWmhkR0Z5TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDA1OjMyOjU0LjA3MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a1fdf3f2d8e840ef052c3504881e762bdf3c7808/avatar.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22avatar.jpeg%22%3B+filename%2A%3DUTF-8%27%27avatar.jpeg
+Completed 302 Found in 209ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZRalJMVEd0U1JtaFZPVlJsWms1VWFscE9hRTFLUjNVeUx6YzNPV1F4TkRkaE56RmlZemt5WldRNU9HTmpOak14WmpJNE9ERXhaR1UwTURobU9EZzFNV0V3TWpneE1HTTRNbU13WlRoaFpEVTFNak5pTnpSbU5XVUdPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJa0ZwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0poZG1GMFlYSXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbllYWmhkR0Z5TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDA1OjMyOjU0LjA3MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a1fdf3f2d8e840ef052c3504881e762bdf3c7808/avatar.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22avatar.jpeg%22%3B+filename%2A%3DUTF-8%27%27avatar.jpeg" for ::1 at 2022-09-13 10:27:54 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"avatar.jpeg\"; filename*=UTF-8''avatar.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZRalJMVEd0U1JtaFZPVlJsWms1VWFscE9hRTFLUjNVeUx6YzNPV1F4TkRkaE56RmlZemt5WldRNU9HTmpOak14WmpJNE9ERXhaR1UwTURobU9EZzFNV0V3TWpneE1HTTRNbU13WlRoaFpEVTFNak5pTnpSbU5XVUdPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJa0ZwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0poZG1GMFlYSXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbllYWmhkR0Z5TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDA1OjMyOjU0LjA3MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a1fdf3f2d8e840ef052c3504881e762bdf3c7808", "filename"=>"avatar"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users/" for ::1 at 2022-09-13 12:19:57 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/admin/users/index.html.erb:23
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:41
+  Rendered admin/users/index.html.erb within layouts/application (155.8ms)
+Completed 200 OK in 260ms (Views: 221.3ms | ActiveRecord: 21.6ms)
+
+
+Started GET "/admin/users/new" for ::1 at 2022-09-13 12:20:17 +0500
+Processing by Admin::UsersController#new as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/new.html.erb within layouts/application
+  Rendered admin/users/_form.html.erb (80.3ms)
+  Rendered admin/users/new.html.erb within layouts/application (82.9ms)
+Completed 200 OK in 174ms (Views: 163.5ms | ActiveRecord: 1.7ms)
+
+

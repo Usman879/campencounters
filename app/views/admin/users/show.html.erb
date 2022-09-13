@@ -1,3 +1,4 @@
+<%= image_tag (@user.thumbnail) if @user.image.attached? %>
 <div><b>First Name: </b><%= @user.first_name %></div>
 <div><b>Last Name: </b><%= @user.last_name %></div>
 <div><b>Email: </b><%= @user.email %></div>
