@@ -31024,3 +31024,562 @@ Processing by Admin::UsersController#new as HTML
 Completed 200 OK in 174ms (Views: 163.5ms | ActiveRecord: 1.7ms)
 
 
+Started GET "/admin/users?page=2" for ::1 at 2022-09-13 13:47:04 +0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.8.1) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.8.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/users/" for ::1 at 2022-09-13 13:47:10 +0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.8.1) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.8.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/users" for ::1 at 2022-09-13 13:47:15 +0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.8.1) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.8.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6665459829308739270)[0m
+  ↳ bin/rails:11
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+Migrating to CreateCamps (20220913081622)
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:11
+  [1m[35m (4.4ms)[0m  [1m[35mALTER TABLE "camps" ADD "title" character varying[0m
+  ↳ db/migrate/20220913081622_create_camps.rb:4
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:11
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(6665459829308739270)[0m
+  ↳ bin/rails:11
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6665459829308739270)[0m
+  ↳ bin/rails:11
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+Migrating to CreateActiveStorageTables (20220912131034)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:11
+  [1m[35m (6.0ms)[0m  [1m[35mDROP TABLE "active_storage_attachments"[0m
+  ↳ bin/rails:11
+  [1m[35m (2.5ms)[0m  [1m[35mDROP TABLE "active_storage_blobs"[0m
+  ↳ bin/rails:11
+  [1m[36mActiveRecord::SchemaMigration Destroy (2.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20220912131034"]]
+  ↳ bin/rails:11
+  [1m[35m (10.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:11
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6665459829308739270)[0m
+  ↳ bin/rails:11
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6665459829308739270)[0m
+  ↳ bin/rails:11
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+Migrating to CreateActiveStorageTables (20220912131034)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:11
+  [1m[35m (25.4ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "byte_size" bigint NOT NULL, "checksum" character varying NOT NULL, "created_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20220912131034_create_active_storage_tables.active_storage.rb:4
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_blobs_on_key" ON "active_storage_blobs"  ("key")[0m
+  ↳ db/migrate/20220912131034_create_active_storage_tables.active_storage.rb:4
+  [1m[35m (28.8ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  ↳ db/migrate/20220912131034_create_active_storage_tables.active_storage.rb:16
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE  INDEX  "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments"  ("blob_id")[0m
+  ↳ db/migrate/20220912131034_create_active_storage_tables.active_storage.rb:16
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_attachments_uniqueness" ON "active_storage_attachments"  ("record_type", "record_id", "name", "blob_id")[0m
+  ↳ db/migrate/20220912131034_create_active_storage_tables.active_storage.rb:16
+  [1m[36mActiveRecord::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220912131034"]]
+  ↳ bin/rails:11
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:11
+Migrating to CreateCamps (20220913081622)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:11
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "camps" ADD "title" character varying[0m
+  ↳ db/migrate/20220913081622_create_camps.rb:4
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:11
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(6665459829308739270)[0m
+  ↳ bin/rails:11
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6665459829308739270)[0m
+  ↳ bin/rails:11
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+Migrating to CreateCamps (20220913081622)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:11
+  [1m[35m (12.0ms)[0m  [1m[35mCREATE TABLE "camps" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20220913081622_create_camps.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220913081622"]]
+  ↳ bin/rails:11
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:11
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:11
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:11
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6665459829308739270)[0m
+  ↳ bin/rails:11
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6665459829308739270)[0m
+  ↳ bin/rails:11
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+Migrating to AddColumnToCamps (20220913100946)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:11
+  [1m[35m (8.4ms)[0m  [1m[35mALTER TABLE "camps" ADD "title" character varying[0m
+  ↳ db/migrate/20220913100946_add_column_to_camps.rb:3
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "camps" ADD "locations" character varying[0m
+  ↳ db/migrate/20220913100946_add_column_to_camps.rb:4
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "camps" ADD "registration_date" date[0m
+  ↳ db/migrate/20220913100946_add_column_to_camps.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (4.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220913100946"]]
+  ↳ bin/rails:11
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:11
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:11
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:11
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:11
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(6665459829308739270)[0m
+  ↳ bin/rails:11
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+Started GET "/admin/users" for ::1 at 2022-09-13 16:07:45 +0500
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/admin/users/index.html.erb:23
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:41
+  Rendered admin/users/index.html.erb within layouts/application (226.4ms)
+Completed 200 OK in 6483ms (Views: 6373.4ms | ActiveRecord: 20.2ms)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6665459829308739270)[0m
+  ↳ bin/rails:11
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+Migrating to AddAttributesToCamps (20220913112817)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:11
+  [1m[35m (2.5ms)[0m  [1m[35mALTER TABLE "camps" ADD "camp_type" integer[0m
+  ↳ db/migrate/20220913112817_add_attributes_to_camps.rb:3
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "camps" ADD "camp_status" integer[0m
+  ↳ db/migrate/20220913112817_add_attributes_to_camps.rb:4
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "camps" ADD "applicant_registration_start_date" date[0m
+  ↳ db/migrate/20220913112817_add_attributes_to_camps.rb:5
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "camps" ADD "applicant_registration_start_time" time[0m
+  ↳ db/migrate/20220913112817_add_attributes_to_camps.rb:6
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "camps" ADD "applicant_registration_end_date" date[0m
+  ↳ db/migrate/20220913112817_add_attributes_to_camps.rb:7
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "camps" ADD "applicant_registration_end_time" time[0m
+  ↳ db/migrate/20220913112817_add_attributes_to_camps.rb:8
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "camps" ADD "parent_application_start_date" date[0m
+  ↳ db/migrate/20220913112817_add_attributes_to_camps.rb:9
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "camps" ADD "parent_application_start_time" time[0m
+  ↳ db/migrate/20220913112817_add_attributes_to_camps.rb:10
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "camps" ADD "parent_application_end_date" date[0m
+  ↳ db/migrate/20220913112817_add_attributes_to_camps.rb:11
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "camps" ADD "parent_application_end_time" time[0m
+  ↳ db/migrate/20220913112817_add_attributes_to_camps.rb:12
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "camps" DROP COLUMN "registration_date"[0m
+  ↳ db/migrate/20220913112817_add_attributes_to_camps.rb:13
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220913112817"]]
+  ↳ bin/rails:11
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:11
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:11
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:11
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(6665459829308739270)[0m
+  ↳ bin/rails:11
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+Started GET "/admin/users?page=2" for ::1 at 2022-09-13 16:43:41 +0500
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  ↳ app/views/admin/users/index.html.erb:23
+  Rendered admin/users/index.html.erb within layouts/application (49.5ms)
+Completed 200 OK in 276ms (Views: 199.8ms | ActiveRecord: 17.9ms)
+
+
+Started GET "/admin/users/45" for ::1 at 2022-09-13 16:43:46 +0500
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:59
+  Rendering admin/users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 45], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/admin/users/show.html.erb:1
+  Rendered admin/users/show.html.erb within layouts/application (32.7ms)
+Completed 200 OK in 206ms (Views: 156.7ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/admin/users/45" for ::1 at 2022-09-13 16:43:52 +0500
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:59
+  Rendering admin/users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (2.9ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 45], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/admin/users/show.html.erb:1
+  Rendered admin/users/show.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 291ms (Views: 270.4ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/admin/users?page=2" for ::1 at 2022-09-13 16:43:56 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  ↳ app/views/admin/users/index.html.erb:23
+  Rendered admin/users/index.html.erb within layouts/application (38.5ms)
+Completed 200 OK in 230ms (Views: 211.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/admin/users/45/edit" for ::1 at 2022-09-13 16:43:58 +0500
+Processing by Admin::UsersController#edit as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:59
+  Rendering admin/users/edit.html.erb within layouts/application
+  Rendered admin/users/_form.html.erb (65.6ms)
+  Rendered admin/users/edit.html.erb within layouts/application (71.9ms)
+Completed 200 OK in 201ms (Views: 189.0ms | ActiveRecord: 2.6ms)
+
+
+Started PATCH "/admin/users/45" for ::1 at 2022-09-13 16:44:24 +0500
+Processing by Admin::UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6XoqzA/mJwc4tVVEAowKwKeFQUu+a1OF8FL6ANmcLNrzsHr/HVDlpI30/ENAyOiv9UhAO2yWCXOf5RjHXbmkbA==", "user"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x0000556e11d31d30 @tempfile=#<Tempfile:/tmp/RackMultipart20220913-214373-g87opc.jpeg>, @original_filename="avatar.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"avatar.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "first_name"=>"Yasir", "last_name"=>"wahab", "phone_number"=>"03011234567", "country"=>"AF", "email"=>"rahmanyasir64@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Update User", "id"=>"45"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:59
+  [1m[35m (2.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admin/users_controller.rb:42
+  [1m[36mActiveStorage::Attachment Load (1.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 45], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:42
+[36m  Disk Storage (7.0ms) [0m[32mUploaded file to key: tyYQaTaYf4NQRe4c3aV5cjPP (checksum: lIKF6ACuKvSt6KwbWxuKTw==)[0m
+  [1m[36mActiveStorage::Blob Create (1.6ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "tyYQaTaYf4NQRe4c3aV5cjPP"], ["filename", "avatar.jpeg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 39448], ["checksum", "lIKF6ACuKvSt6KwbWxuKTw=="], ["created_at", "2022-09-13 11:44:24.500274"]]
+  ↳ app/controllers/admin/users_controller.rb:42
+  [1m[36mActiveStorage::Attachment Create (3.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "image"], ["record_type", "User"], ["record_id", 45], ["blob_id", 1], ["created_at", "2022-09-13 11:44:24.537023"]]
+  ↳ app/controllers/admin/users_controller.rb:42
+  [1m[36mUser Exists (2.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "rahmanyasir64@gmail.com"], ["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:42
+  [1m[36mUser Update (8.5ms)[0m  [1m[33mUPDATE "users" SET "encrypted_password" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["encrypted_password", "$2a$12$YCzV9uYZoJ8DWGnlr7KNeeyshUlElsb2Acw0GBTFthjNM/mnIw8NS"], ["updated_at", "2022-09-13 11:44:24.560008"], ["id", 45]]
+  ↳ app/controllers/admin/users_controller.rb:42
+  [1m[36mUser Update (4.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1 WHERE "users"."id" = $2[0m  [["updated_at", "2022-09-13 11:44:24.546723"], ["id", 45]]
+  ↳ app/controllers/admin/users_controller.rb:42
+  [1m[35m (7.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/admin/users_controller.rb:42
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 5564555a-5ef6-4d08-8ca5-252a27f91e72) to Async(default) with arguments: #<GlobalID:0x00007f661ce55590 @uri=#<URI::GID gid://campencounters/ActiveStorage::Blob/1>>
+Redirected to http://localhost:3000/admin/users/45
+Completed 302 Found in 687ms (ActiveRecord: 44.5ms)
+
+
+Started GET "/admin/users/45" for ::1 at 2022-09-13 16:44:24 +0500
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mUser Load (11.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:59
+  [1m[36mActiveStorage::Blob Load (6.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5564555a-5ef6-4d08-8ca5-252a27f91e72] Performing ActiveStorage::AnalyzeJob (Job ID: 5564555a-5ef6-4d08-8ca5-252a27f91e72) from Async(default) with arguments: #<GlobalID:0x00007f661d00cfa0 @uri=#<URI::GID gid://campencounters/ActiveStorage::Blob/1>>
+  Rendering admin/users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 45], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/admin/users/show.html.erb:1
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5564555a-5ef6-4d08-8ca5-252a27f91e72] [36m  Disk Storage (9.7ms) [0m[34mDownloaded file from key: tyYQaTaYf4NQRe4c3aV5cjPP[0m
+  [1m[36mActiveStorage::Blob Load (3.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/users/show.html.erb:1
+  Rendered admin/users/show.html.erb within layouts/application (184.9ms)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5564555a-5ef6-4d08-8ca5-252a27f91e72]   [1m[35m (4.6ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5564555a-5ef6-4d08-8ca5-252a27f91e72]   ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5564555a-5ef6-4d08-8ca5-252a27f91e72]   [1m[36mActiveStorage::Blob Update (2.1ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"width\":1920,\"height\":1080,\"analyzed\":true}"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5564555a-5ef6-4d08-8ca5-252a27f91e72]   ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5564555a-5ef6-4d08-8ca5-252a27f91e72]   [1m[35m (21.6ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5564555a-5ef6-4d08-8ca5-252a27f91e72]   ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5564555a-5ef6-4d08-8ca5-252a27f91e72] Performed ActiveStorage::AnalyzeJob (Job ID: 5564555a-5ef6-4d08-8ca5-252a27f91e72) from Async(default) in 225.21ms
+Completed 200 OK in 429ms (Views: 378.1ms | ActiveRecord: 21.5ms)
+
+
+Started GET "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--56eabc4518344556bdae6ebd072d4648d6898bf3/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lOTXpBd2VESXdNQ0VHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--f1427eab8b8f2210a1f1729d1329ac20af93adf2/avatar.jpeg" for ::1 at 2022-09-13 16:44:25 +0500
+Processing by ActiveStorage::RepresentationsController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--56eabc4518344556bdae6ebd072d4648d6898bf3", "variation_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lOTXpBd2VESXdNQ0VHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--f1427eab8b8f2210a1f1729d1329ac20af93adf2", "filename"=>"avatar"}
+  [1m[36mActiveStorage::Blob Load (1.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.1ms) [0m[34mChecked if file exists at key: variants/tyYQaTaYf4NQRe4c3aV5cjPP/779d147a71bc92ed98cc631f28811de408f8851a02810c82c0e8ad5523b74f5e (no)[0m
+[36m  Disk Storage (0.9ms) [0m[34mDownloaded file from key: tyYQaTaYf4NQRe4c3aV5cjPP[0m
+[36m  Disk Storage (1.0ms) [0m[32mUploaded file to key: variants/tyYQaTaYf4NQRe4c3aV5cjPP/779d147a71bc92ed98cc631f28811de408f8851a02810c82c0e8ad5523b74f5e[0m
+[36m  Disk Storage (2.4ms) [0m[34mGenerated URL for file at key: variants/tyYQaTaYf4NQRe4c3aV5cjPP/779d147a71bc92ed98cc631f28811de408f8851a02810c82c0e8ad5523b74f5e (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZkSGxaVVdGVVlWbG1ORTVSVW1VMFl6TmhWalZqYWxCUUx6YzNPV1F4TkRkaE56RmlZemt5WldRNU9HTmpOak14WmpJNE9ERXhaR1UwTURobU9EZzFNV0V3TWpneE1HTTRNbU13WlRoaFpEVTFNak5pTnpSbU5XVUdPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJa0ZwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0poZG1GMFlYSXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbllYWmhkR0Z5TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDExOjQ5OjI1LjY4MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--d818f77a4c64c3e95b61f852e3e09b19095c2d2f/avatar.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22avatar.jpeg%22%3B+filename%2A%3DUTF-8%27%27avatar.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZkSGxaVVdGVVlWbG1ORTVSVW1VMFl6TmhWalZqYWxCUUx6YzNPV1F4TkRkaE56RmlZemt5WldRNU9HTmpOak14WmpJNE9ERXhaR1UwTURobU9EZzFNV0V3TWpneE1HTTRNbU13WlRoaFpEVTFNak5pTnpSbU5XVUdPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJa0ZwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0poZG1GMFlYSXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbllYWmhkR0Z5TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDExOjQ5OjI1LjY4MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--d818f77a4c64c3e95b61f852e3e09b19095c2d2f/avatar.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22avatar.jpeg%22%3B+filename%2A%3DUTF-8%27%27avatar.jpeg
+Completed 302 Found in 274ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZkSGxaVVdGVVlWbG1ORTVSVW1VMFl6TmhWalZqYWxCUUx6YzNPV1F4TkRkaE56RmlZemt5WldRNU9HTmpOak14WmpJNE9ERXhaR1UwTURobU9EZzFNV0V3TWpneE1HTTRNbU13WlRoaFpEVTFNak5pTnpSbU5XVUdPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJa0ZwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0poZG1GMFlYSXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbllYWmhkR0Z5TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDExOjQ5OjI1LjY4MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--d818f77a4c64c3e95b61f852e3e09b19095c2d2f/avatar.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22avatar.jpeg%22%3B+filename%2A%3DUTF-8%27%27avatar.jpeg" for ::1 at 2022-09-13 16:44:25 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"avatar.jpeg\"; filename*=UTF-8''avatar.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZkSGxaVVdGVVlWbG1ORTVSVW1VMFl6TmhWalZqYWxCUUx6YzNPV1F4TkRkaE56RmlZemt5WldRNU9HTmpOak14WmpJNE9ERXhaR1UwTURobU9EZzFNV0V3TWpneE1HTTRNbU13WlRoaFpEVTFNak5pTnpSbU5XVUdPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJa0ZwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0poZG1GMFlYSXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbllYWmhkR0Z5TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDExOjQ5OjI1LjY4MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--d818f77a4c64c3e95b61f852e3e09b19095c2d2f", "filename"=>"avatar"}
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users?page=2" for ::1 at 2022-09-13 16:44:40 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  ↳ app/views/admin/users/index.html.erb:23
+  Rendered admin/users/index.html.erb within layouts/application (58.3ms)
+Completed 200 OK in 350ms (Views: 323.7ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/admin/users/45" for ::1 at 2022-09-13 16:44:44 +0500
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (9.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/admin/users_controller.rb:59
+  Rendering admin/users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 45], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/admin/users/show.html.erb:1
+  [1m[36mActiveStorage::Blob Load (1.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/users/show.html.erb:1
+  Rendered admin/users/show.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 174ms (Views: 147.2ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZkSGxaVVdGVVlWbG1ORTVSVW1VMFl6TmhWalZqYWxCUUx6YzNPV1F4TkRkaE56RmlZemt5WldRNU9HTmpOak14WmpJNE9ERXhaR1UwTURobU9EZzFNV0V3TWpneE1HTTRNbU13WlRoaFpEVTFNak5pTnpSbU5XVUdPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJa0ZwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0poZG1GMFlYSXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbllYWmhkR0Z5TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDExOjQ5OjI1LjY4MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--d818f77a4c64c3e95b61f852e3e09b19095c2d2f/avatar.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22avatar.jpeg%22%3B+filename%2A%3DUTF-8%27%27avatar.jpeg" for ::1 at 2022-09-13 16:44:45 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"avatar.jpeg\"; filename*=UTF-8''avatar.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZkSGxaVVdGVVlWbG1ORTVSVW1VMFl6TmhWalZqYWxCUUx6YzNPV1F4TkRkaE56RmlZemt5WldRNU9HTmpOak14WmpJNE9ERXhaR1UwTURobU9EZzFNV0V3TWpneE1HTTRNbU13WlRoaFpEVTFNak5pTnpSbU5XVUdPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJa0ZwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0poZG1GMFlYSXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbllYWmhkR0Z5TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDExOjQ5OjI1LjY4MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--d818f77a4c64c3e95b61f852e3e09b19095c2d2f", "filename"=>"avatar"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/users" for ::1 at 2022-09-13 16:45:00 +0500
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/admin/users/index.html.erb:23
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:41
+  Rendered admin/users/index.html.erb within layouts/application (174.8ms)
+Completed 200 OK in 366ms (Views: 338.0ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/admin/users?direction=asc&sort=User%27s+ID" for ::1 at 2022-09-13 16:52:20 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"User's ID"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/admin/users/index.html.erb:23
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:41
+  Rendered admin/users/index.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 99ms (Views: 82.4ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/admin/users?direction=asc&sort=User%27s+ID" for ::1 at 2022-09-13 16:52:23 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"User's ID"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/admin/users/index.html.erb:23
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:41
+  Rendered admin/users/index.html.erb within layouts/application (32.9ms)
+Completed 200 OK in 132ms (Views: 118.4ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/admin/users?direction=asc&sort=User%27s+ID" for ::1 at 2022-09-13 16:52:24 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"User's ID"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/admin/users/index.html.erb:23
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:41
+  Rendered admin/users/index.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 117ms (Views: 107.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/admin/users?direction=asc&sort=First+Name" for ::1 at 2022-09-13 16:52:24 +0500
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"First Name"}
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ /home/usman/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering admin/users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/admin/users/index.html.erb:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/admin/users/index.html.erb:41
+  Rendered admin/users/index.html.erb within layouts/application (30.2ms)
+Completed 200 OK in 142ms (Views: 125.7ms | ActiveRecord: 5.5ms)
+
+
