@@ -2,6 +2,12 @@
 require 'csv'
 class User < ApplicationRecord
   paginates_per 5
+
+  has_one_attached :image
+
+  def thumbnail
+    return self.image.variant(resize: '300x200!')
+  end
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   def self.to_csv

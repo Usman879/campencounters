@@ -1,9 +1,10 @@
 <h1>Listing Users</h1>
+
 <form action="<%= admin_users_path %>">
   <input type="text" name="search_key">
   <button type="submit">Search</button>
 </form>
-<%= link_to "New User", new_admin_user_path %></td>
+<%= link_to "Add User", new_admin_user_path %></td>
 <%= link_to "Export Users", admin_users_path(format: :csv) %>
 <table>
   <thead>
