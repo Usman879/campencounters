@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 require 'csv'
 class User < ApplicationRecord
-  paginates_per 5
 
   has_one_attached :image
 
