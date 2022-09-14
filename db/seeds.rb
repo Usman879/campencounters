@@ -10,4 +10,4 @@
 Admin.create!(first_name: 'Usman', last_name: 'Noor', phone_number: '03214004770', email: 'admin12@projectname.com',
               password: 'Password@123')
 SuperAdmin.create!(first_name: 'SuperUs', last_name: 'Noor', phone_number: '03214042770', email: 'super@projectname.com',
-password: 'Password@123')
+                   password: 'Password@123')
