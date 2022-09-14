@@ -6,6 +6,7 @@
 </form>
 
 <%= link_to "Add Camp", new_admin_camp_path %></td>
+<%= link_to "Export Report", admin_camps_path(format: :csv) %>
 <table>
   <thead>
     <tr>
@@ -23,7 +24,7 @@
       <td><%= camp.id %></td>
       <td><%= camp.title %></td>
       <td><%= camp.locations %></td>
-      <td><%= camp.status %></td>
+      <td><%= camp.camp_status %></td>
       <td><%= camp.applicant_registration_start_date %></td>
       <td><%= link_to "View |", admin_camp_path(camp) %></td>
       <td><%= link_to "Edit |", edit_admin_camp_path(camp) %></td>
@@ -33,3 +34,6 @@
  </tbody>
 
 </table>
+<div>
+<%= paginate @camps %>
+</div>
