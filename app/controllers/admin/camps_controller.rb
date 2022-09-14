@@ -33,9 +33,9 @@ class Admin::CampsController < ApplicationController
 
   def update
     if @camp.update(camp_params)
-			redirect_to admin_camp_path
+      redirect_to admin_camp_path
 		else
-			render 'edit' , notice: "Camp Successfully Updated."
+      render 'edit' , notice: "Camp Successfully Updated."
 		end
   end
 
@@ -50,7 +50,7 @@ class Admin::CampsController < ApplicationController
     @camp = Camp.find(params[:id])
   end
 
-	def camp_params
+  def camp_params
     params.require(:camp).permit(
       :id, :title, :locations, :camp_type, :camp_status, 
       :applicant_registration_start_date, :applicant_registration_start_time,

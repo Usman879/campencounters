@@ -32,10 +32,10 @@ class Admin::UsersController < ApplicationController
     end
   end
 
-	def show
+  def show
 	end
-
-	def edit
+  
+  def edit
 	end
 	
 	def update
@@ -58,8 +58,8 @@ class Admin::UsersController < ApplicationController
 	def find_user
     @user = User.find(params[:id])
   end
-
-	def user_params
+  
+  def user_params
     params.require(:user).permit(:id, :first_name, :last_name, :email, :phone_number, :password, :country, :type, :image)
   end
 
