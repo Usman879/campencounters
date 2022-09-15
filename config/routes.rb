@@ -2,7 +2,7 @@
 
 Rails.application.routes.draw do
   root 'welcome#index'
-  # get '/search', to: "users#search"
+  resources :camp_multi_steps
   namespace :admin do
     resources :users
     resources :camps
