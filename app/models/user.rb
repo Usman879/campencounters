@@ -1,8 +1,26 @@
 # frozen_string_literal: true
 
+require 'csv'
 class User < ApplicationRecord
+  has_one_attached :image
+
+  def thumbnail
+    image.variant(resize: '300x200!')
+  end
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  def self.to_csv
+    attributes = %w[id first_name last_name email country phone_number]
+
+    CSV.generate(headers: true) do |csv|
+      csv << attributes
+
+      all.each do |user|
+        csv << attributes.map { |attr| user.send(attr) }
+      end
+    end
+  end
   attribute :agreement, :integer
   validates :agreement, acceptance: { accept: 1 }
 

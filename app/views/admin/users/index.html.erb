@@ -1,0 +1,42 @@
+<h1>Listing Users</h1>
+
+<form action="<%= admin_users_path %>">
+  <input type="text" name="search_key">
+  <button type="submit">Search</button>
+</form>
+<%= link_to "Add User", new_admin_user_path %></td>
+<%= link_to "Export Users", admin_users_path(format: :csv) %>
+<table>
+  <thead>
+    <tr>
+      <th><%= sortable "User's ID" %></th>
+      <th><%= sortable "First Name" %></th>
+      <th><%= sortable "Last Name" %></th>
+      <th><%= sortable "Phone Number" %></th>
+      <th><%= sortable "Country" %></th>
+      <th><%= sortable "Email" %></th>
+      <th><%= sortable "Role" %></th>
+      <th colspan="3">Actions</th>
+    </tr>
+  </thead>
+ <tbody>
+  <% @users.each do |user|%>
+    <tr>
+      <td><%= user.id %></td>
+      <td><%= user.first_name %></td>
+      <td><%= user.last_name %></td>
+      <td><%= user.phone_number %></td>
+      <td><%= user.country %></td>
+      <td><%= user.email %></td>
+      <td><%= user.type %></td>
+      <td><%= link_to "View |", admin_user_path(user) %></td>
+      <td><%= link_to "Edit |", edit_admin_user_path(user) %></td>
+      <td><%= link_to "Delete ", admin_user_path(user) , method: :delete, data: { confirm: "Are you sure?" } %></td>
+    </tr>
+  <%end%>
+ </tbody>
+
+</table>
+<div>
+<%= paginate @users%>
+</div>
