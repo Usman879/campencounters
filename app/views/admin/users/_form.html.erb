@@ -3,7 +3,7 @@
     <%= render 'profile' %>
   </div>
   <br>
-  
+
   <%= form_for [:admin, @user] do |f| %>
 
   <div class="form-outline mb-4">
@@ -17,7 +17,7 @@
     <div class="col">
       <div class="form-outline" >
         <%= f.label :first_name %><br/>
-        <%= f.text_field :first_name %><br>
+        <%= f.text_field :first_name, autofocus: true, class: "form-control" %><br>
         <br>
       </div>
     </div>
@@ -25,7 +25,7 @@
     <div class="col">
       <div class="form-outline" >
         <%= f.label :last_name %><br/>
-        <%= f.text_field :last_name %><br>
+        <%= f.text_field :last_name, autofocus: true, class: "form-control" %><br>
         <br>
       </div>
     </div>
@@ -35,30 +35,30 @@
 
     <div class="form-outline mb-4">
       <%= f.label :phone_number %><br/>
-      <%= f.text_field :phone_number %><br>
+      <%= f.text_field :phone_number, autofocus: true, class: "form-control" %><br>
       <br>
     </div>
 
     <div class="form-outline mb-4">
       <%= f.label :country %><br/>
-      <%= f.country_select :country , {} %><br>
+      <%= f.country_select :country , {}, class: "dropdown-item" %><br>
       <br>
     </div>
 
     <div class="form-outline mb-4">
       <%= f.label :email %><br/>
-      <%= f.email_field :email %><br>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %><br>
       <br>
     </div>
 
     <div class="form-outline mb-4">
       <%= f.label :password %><br/>
-      <%= f.password_field :password %>
+      <%= f.password_field :password, class: "form-control" %>
       <br>
     </div>
 
     <div class="text-center">
-      <%= f.submit %>
+      <%= f.submit class: "btn btn-primary mb-4"%>
       <% end %>
     </div>
 </div>

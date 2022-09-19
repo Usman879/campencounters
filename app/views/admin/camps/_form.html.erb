@@ -1,22 +1,35 @@
-<%= form_for [:admin, @camp] do |f| %>
-    
-  <%= f.label :Camp_title %><br/>
-  <%= f.text_field :title %><br>
-  <br>
-
-  <%= f.label :Camp_type %><br/>
-  <%= f.select :camp_type, Camp.camp_types.keys,{}, class: "form-select" %><br>
-  <br>
-
-  <%= f.label :Camp_status %><br/>
-  <%= f.select :camp_status, Camp.camp_statuses.keys,{}, class: "form-select" %><br>
-  <br>
+<div class="container-fluid w-50 border rounded shadow mt-5 p-4 ">
+ <%= form_for [:admin, @camp] do |f| %>
+    <div class="row mb-4">
+      <div class="col">
+        <div class="form-outline" >
+          <%= f.label :Camp_title %><br/>
+          <%= f.text_field :title %><br>
+          <br>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-outline">
+          <%= f.label :Camp_type %><br/>
+          <%= f.select :camp_type, Camp.camp_types.keys,{}, class: "form-select" %><br>
+          <br>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-outline">
+          <%= f.label :Camp_status %><br/>
+          <%= f.select :camp_status, Camp.camp_statuses.keys,{}, class: "form-select" %><br>
+          <br>
+        </div>
+      </div>
+    </div>
 
 <% locations = ['Kenya', 'India', 'Pakistan', 'Expedition Kenya', 'Expedition India']%>
   <% locations.each do |location|%>
-
-    <%= f.label location %>
-    <%= f.check_box :locations, { multiple: true }, location , false %><br>
+    <div class="btn-group mb-3" role="group" aria-label="Basic checkbox toggle button group">
+      <%= f.label location %>
+      <%= f.check_box :locations, { multiple: true }, location , false %><br>
+    </div>
     <br>
   <% end %>
 
@@ -34,21 +47,23 @@
   <div>
 </div>
 
-<div class = "row">
-  <div class = "col form-outline mb-4">
-   <%= f.label :parent_registration_start %><br/>
-   <%= f.text_field :parent_application_start_date, type: :date, class: "form-control" %>
-   <%= f.text_field :parent_application_start_time, type: :time, class: "form-control" %>  
-  <div>
+  <div class = "row">
+    <div class = "col form-outline mb-4">
+     <%= f.label :parent_registration_start %><br/>
+     <%= f.text_field :parent_application_start_date, type: :date, class: "form-control" %>
+     <%= f.text_field :parent_application_start_time, type: :time, class: "form-control" %>  
+    <div>
 
-  <div class = "col form-outline mb-4">
-   <%= f.label :parent_registration_end %><br/>
-   <%= f.text_field :parent_application_end_date, type: :date, class: "form-control" %>
-   <%= f.text_field :parent_application_end_time, type: :time, class: "form-control" %>  
-  <div>
+    <div class = "col form-outline mb-4">
+     <%= f.label :parent_registration_end %><br/>
+     <%= f.text_field :parent_application_end_date, type: :date, class: "form-control" %>
+     <%= f.text_field :parent_application_end_time, type: :time, class: "form-control" %>  
+    <div>
 
+  </div>
+
+  <div class="text-center">
+    <%= f.submit class: "btn btn-primary mb-4" %>
+    <% end %>
+  </div>
 </div>
-
-  <%= f.submit %>
-
-<% end %>
