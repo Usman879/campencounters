@@ -4,7 +4,7 @@ class CampMultiStepsController < ApplicationController
   before_action :camp_validity, only: %i[update]
 
     steps :select_camp, :introduction, :screen_1, :screen_2, :screen_3, :screen_4, 
-    :screen_5, :screen_6, :screen_7, :screen_8
+    :screen_5, :screen_6, :screen_7, :screen_8, :screen_9
 
     def show
       @user = current_user
@@ -30,7 +30,7 @@ class CampMultiStepsController < ApplicationController
         :first_name, :last_name, 
         :phone, :country, :email, 
         :password, :image, 
-        :camp_type, 
+        :gender, :address, :feedback 
         :id :user_id
       )
     end
@@ -43,7 +43,8 @@ class CampMultiStepsController < ApplicationController
         :screen_5,
         :screen_6,
         :screen_7,
-        :screen_8
+        :screen_8,
+        :screen_9
       ]
     end
 

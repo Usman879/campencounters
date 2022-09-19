@@ -12,7 +12,7 @@ class Admin::CampsController < ApplicationController
     if params[:search_key]
       @camps = Camp.where(
         'LOWER(title) LIKE ?',
-        "%#{params[:search_key]}%"
+        "%#{params[:search_key]}%",
       ).page(params[:page])
     else
       @camps = Camp.order(sort_column + ' ' + sort_direction)
@@ -67,19 +67,11 @@ class Admin::CampsController < ApplicationController
 
   def camp_params
     params.require(:camp).permit(
-      :id,
-      :title,
-      :camp_type,
-      :camp_status,
-      :applicant_registration_start_date,
-      :applicant_registration_start_time,
-      :applicant_registration_end_date,
-      :applicant_registration_end_time,
-      :parent_application_start_date,
-      :parent_application_start_time,
-      :parent_application_end_date,
-      :parent_application_end_time,
-      locations: []
+      :id, :title, :camp_type, :camp_status, :applicant_registration_start_date,
+      :applicant_registration_start_time, :applicant_registration_end_date,
+      :applicant_registration_end_time, :parent_application_start_date,
+      :parent_application_start_time, :parent_application_end_date,
+      :parent_application_end_time, locations: []
     )
   end
 

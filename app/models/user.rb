@@ -21,6 +21,8 @@ class User < ApplicationRecord
       end
     end
   end
+
+  enum gender: { other: 0, male: 1, female: 2 }
   attribute :agreement, :integer
   validates :agreement, acceptance: { accept: 1 }
 
@@ -34,8 +36,8 @@ class User < ApplicationRecord
   validates :last_name, presence: true, length: { minimum: 2, maximum: 10 }
   validates :password, presence: true, confirmation: true,
                        format: {
-                         with: /\A[a-zA-Z0-9. ! @ # $ % ^ & * ( ) _ - + =]+\Z/,
-                         message: '(minimum 7 characters with at least one capital letter and a special character)'
+                         with: /\A[a-zA-Z0-9. !@#$%^&*()_ -+=]+\Z/,
+                         message: '(minimum 7 characters with at least one capital letter and a special character)',
                        }
 
   scope :simple_users, -> { where(type: nil) }

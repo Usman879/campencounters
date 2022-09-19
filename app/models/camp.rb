@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'csv'
 class Camp < ApplicationRecord
   enum camp_type: { Virtual: 0, Physical: 1, Hybrid: 2 }

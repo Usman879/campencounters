@@ -7,7 +7,7 @@ class Admin::UsersController < ApplicationController
   def index
     if params[:search_key]
       @users = User.where('LOWER(first_name) LIKE ? OR LOWER(email) LIKE ? ',
-                          "%#{params[:search_key]}%", "%#{params[:search_key]}%").page(params[:page])
+      "%#{params[:search_key]}%", "%#{params[:search_key]}%").page(params[:page])
     else
       @users = User.order(sort_column + ' ' + sort_direction)
       @users = User.order(:id).page(params[:page])
@@ -65,15 +65,7 @@ class Admin::UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(
-      :id,
-      :first_name,
-      :last_name,
-      :email,
-      :phone_number,
-      :password,
-      :country,
-      :type,
-      :image
+      :id, :first_name, :last_name, :email, :phone_number, :password, :country, :type, :image
     )
   end
 
