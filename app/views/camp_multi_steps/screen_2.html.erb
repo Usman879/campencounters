@@ -8,7 +8,7 @@
   <% @users.each do |user|%>
     <div>
       <%= f.label :email %><br />
-      <%= f.email_field :email %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
     </div>
   <%end%>
   <%= f.submit "Continue" %>

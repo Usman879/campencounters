@@ -6,7 +6,7 @@
 <% form_for @user url: next_wizard_path, method: "PUT" do |f|%>
   <%= f.hidden_field :user_id, value: @user.id %>
   <% @users.each do |user|%>
-    <div>
+    <div class = "form-outline mb-4">
       <%= f.label :profile_image %><br/>
       <%= f.file_field :image %><br/>
     </div>  

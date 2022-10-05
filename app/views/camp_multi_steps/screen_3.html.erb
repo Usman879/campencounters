@@ -8,7 +8,7 @@
   <% @users.each do |user|%>
     <div>
       <%= f.label :phone_number %><br />
-      <%= f.text_field :phone_number %>
+      <%= f.text_field :phone_number, autofocus:true, class: "form-control" %>
     </div>
   <%end%>
   <%= f.submit "Continue" %>

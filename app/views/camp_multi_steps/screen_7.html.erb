@@ -8,7 +8,7 @@
   <% @users.each do |user|%>
     <div>
       <%= f.label :Address %><br/>
-      <%= f.text_field :address %><br/>
+      <%= f.text_field :address, class: "form-control" %><br/>
     </div>  
   <%end%>
   <%= f.submit "Continue" %>

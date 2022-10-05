@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :welcome
   root 'welcome#index'
   resources :camp_multi_steps
   namespace :admin do
